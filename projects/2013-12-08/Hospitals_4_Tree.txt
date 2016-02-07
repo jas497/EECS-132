@@ -1,0 +1,502 @@
+Abbott Northwestern Hospital, Advocate Good Samaritan Hospital
+Abbott Northwestern Hospital, Akron City Hospital
+Abbott Northwestern Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Abbott Northwestern Hospital, Aultman Hospital
+Advocate Good Samaritan Hospital, Akron City Hospital
+Advocate Good Samaritan Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Advocate Good Samaritan Hospital, Aultman Hospital
+Akron City Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Akron City Hospital, Aultman Hospital
+Ann and Robert H. Lurie Children's Hospital of Chicago, Aultman Hospital
+Aurora BayCare Medical Center, Abbott Northwestern Hospital
+Aurora BayCare Medical Center, Akron City Hospital
+Aurora BayCare Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Aurora BayCare Medical Center, Aultman Hospital
+Avera McKennan Hospital & University Health Center, Abbott Northwestern Hospital
+Avera McKennan Hospital & University Health Center, Akron City Hospital
+Avera McKennan Hospital & University Health Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Avera McKennan Hospital & University Health Center, Aultman Hospital
+Barnes-Jewish Hospital, Abbott Northwestern Hospital
+Barnes-Jewish Hospital, Akron City Hospital
+Barnes-Jewish Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Barnes-Jewish Hospital, Aultman Hospital
+Baylor University Medical Center, Abbott Northwestern Hospital
+Baylor University Medical Center, Akron City Hospital
+Baylor University Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Baylor University Medical Center, Aultman Hospital
+Baystate Medical Center, Abbott Northwestern Hospital
+Baystate Medical Center, Advocate Good Samaritan Hospital
+Baystate Medical Center, Akron City Hospital
+Baystate Medical Center, Aultman Hospital
+Beaumont Hospital, Avera McKennan Hospital & University Health Center
+Beaumont Hospital, Abbott Northwestern Hospital
+Beaumont Hospital, Akron City Hospital
+Beaumont Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Bethesda North Hospital, Beaumont Hospital
+Bethesda North Hospital, Avera McKennan Hospital & University Health Center
+Bethesda North Hospital, Abbott Northwestern Hospital
+Bethesda North Hospital, Akron City Hospital
+Beth Israel Deaconess Medical Center, Beaumont Hospital
+Beth Israel Deaconess Medical Center, Abbott Northwestern Hospital
+Beth Israel Deaconess Medical Center, Akron City Hospital
+Beth Israel Deaconess Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Billings Clinic Hospital, Beaumont Hospital
+Billings Clinic Hospital, Abbott Northwestern Hospital
+Billings Clinic Hospital, Akron City Hospital
+Billings Clinic Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Bon Secours Memorial Regional Medical Center, Beaumont Hospital
+Bon Secours Memorial Regional Medical Center, Abbott Northwestern Hospital
+Bon Secours Memorial Regional Medical Center, Akron City Hospital
+Bon Secours Memorial Regional Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Bon Secours St. Francis Hospital, Aurora BayCare Medical Center
+Bon Secours St. Francis Hospital, Abbott Northwestern Hospital
+Bon Secours St. Francis Hospital, Akron City Hospital
+Bon Secours St. Francis Hospital, Aultman Hospital
+Boston Children's Hospital, Aurora BayCare Medical Center
+Boston Children's Hospital, Abbott Northwestern Hospital
+Boston Children's Hospital, Akron City Hospital
+Boston Children's Hospital, Aultman Hospital
+Brigham and Women's Hospital, Baystate Medical Center
+Brigham and Women's Hospital, Advocate Good Samaritan Hospital
+Brigham and Women's Hospital, Akron City Hospital
+Brigham and Women's Hospital, Aultman Hospital
+Bronson Methodist Hospital, Beth Israel Deaconess Medical Center
+Bronson Methodist Hospital, Beaumont Hospital
+Bronson Methodist Hospital, Abbott Northwestern Hospital
+Bronson Methodist Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Carolinas Medical Center-Mercy, Brigham and Women's Hospital
+Carolinas Medical Center-Mercy, Baystate Medical Center
+Carolinas Medical Center-Mercy, Advocate Good Samaritan Hospital
+Carolinas Medical Center-Mercy, Aultman Hospital
+Cedars-Sinai Medical Center, Abbott Northwestern Hospital
+Cedars-Sinai Medical Center, Advocate Good Samaritan Hospital
+Cedars-Sinai Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Cedars-Sinai Medical Center, Aultman Hospital
+Central DuPage Hospital, Billings Clinic Hospital
+Central DuPage Hospital, Beaumont Hospital
+Central DuPage Hospital, Abbott Northwestern Hospital
+Central DuPage Hospital, Akron City Hospital
+Chesterfield General Hospital, Aurora BayCare Medical Center
+Chesterfield General Hospital, Abbott Northwestern Hospital
+Chesterfield General Hospital, Akron City Hospital
+Chesterfield General Hospital, Aultman Hospital
+Children's Hospital Colorado, Aurora, Billings Clinic Hospital
+Children's Hospital Colorado, Aurora, Beaumont Hospital
+Children's Hospital Colorado, Aurora, Abbott Northwestern Hospital
+Children's Hospital Colorado, Aurora, Akron City Hospital
+Children's Hospital Los Angeles, Abbott Northwestern Hospital
+Children's Hospital Los Angeles, Advocate Good Samaritan Hospital
+Children's Hospital Los Angeles, Ann and Robert H. Lurie Children's Hospital of Chicago
+Children's Hospital Los Angeles, Aultman Hospital
+Children's Hospital of Philadelphia, Beaumont Hospital
+Children's Hospital of Philadelphia, Abbott Northwestern Hospital
+Children's Hospital of Philadelphia, Akron City Hospital
+Children's Hospital of Philadelphia, Ann and Robert H. Lurie Children's Hospital of Chicago
+Children's Hospital of Pittsburgh, Barnes-Jewish Hospital
+Children's Hospital of Pittsburgh, Abbott Northwestern Hospital
+Children's Hospital of Pittsburgh, Akron City Hospital
+Children's Hospital of Pittsburgh, Ann and Robert H. Lurie Children's Hospital of Chicago
+The Christ Hospital, Carolinas Medical Center-Mercy
+The Christ Hospital, Brigham and Women's Hospital
+The Christ Hospital, Baystate Medical Center
+The Christ Hospital, Advocate Good Samaritan Hospital
+Christiana Hospital, Baystate Medical Center
+Christiana Hospital, Advocate Good Samaritan Hospital
+Christiana Hospital, Akron City Hospital
+Christiana Hospital, Aultman Hospital
+Cincinnati Children's Hospital Medical Center, Carolinas Medical Center-Mercy
+Cincinnati Children's Hospital Medical Center, Baystate Medical Center
+Cincinnati Children's Hospital Medical Center, Advocate Good Samaritan Hospital
+Cincinnati Children's Hospital Medical Center, Aultman Hospital
+Cleveland Clinic, Baylor University Medical Center
+Cleveland Clinic, Akron City Hospital
+Cleveland Clinic, Ann and Robert H. Lurie Children's Hospital of Chicago
+Cleveland Clinic, Aultman Hospital
+Deaconess Hospital, Bethesda North Hospital
+Deaconess Hospital, Beaumont Hospital
+Deaconess Hospital, Avera McKennan Hospital & University Health Center
+Deaconess Hospital, Akron City Hospital
+Doctors Hospital West, Cleveland Clinic
+Doctors Hospital West, Baylor University Medical Center
+Doctors Hospital West, Ann and Robert H. Lurie Children's Hospital of Chicago
+Doctors Hospital West, Aultman Hospital
+Duke University Hospital, Aurora BayCare Medical Center
+Duke University Hospital, Abbott Northwestern Hospital
+Duke University Hospital, Akron City Hospital
+Duke University Hospital, Aultman Hospital
+EMH Regional Medical Center, Baylor University Medical Center
+EMH Regional Medical Center, Abbott Northwestern Hospital
+EMH Regional Medical Center, Akron City Hospital
+EMH Regional Medical Center, Aultman Hospital
+Emory University Hospital, The Christ Hospital
+Emory University Hospital, Brigham and Women's Hospital
+Emory University Hospital, Baystate Medical Center
+Emory University Hospital, Advocate Good Samaritan Hospital
+Evanston Hospital, Duke University Hospital
+Evanston Hospital, Abbott Northwestern Hospital
+Evanston Hospital, Akron City Hospital
+Evanston Hospital, Aultman Hospital
+Fairview Hospital, Carolinas Medical Center-Mercy
+Fairview Hospital, Brigham and Women's Hospital
+Fairview Hospital, Advocate Good Samaritan Hospital
+Fairview Hospital, Aultman Hospital
+Florida Hospital, Baystate Medical Center
+Florida Hospital, Advocate Good Samaritan Hospital
+Florida Hospital, Akron City Hospital
+Florida Hospital, Aultman Hospital
+Froedtert Hospital, Cincinnati Children's Hospital Medical Center
+Froedtert Hospital, Carolinas Medical Center-Mercy
+Froedtert Hospital, Baystate Medical Center
+Froedtert Hospital, Aultman Hospital
+Gaston Memorial Hospital, Christiana Hospital
+Gaston Memorial Hospital, Baystate Medical Center
+Gaston Memorial Hospital, Akron City Hospital
+Gaston Memorial Hospital, Aultman Hospital
+Geisinger Medical Center, Beaumont Hospital
+Geisinger Medical Center, Abbott Northwestern Hospital
+Geisinger Medical Center, Akron City Hospital
+Geisinger Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Grant Medical Center, Bon Secours St. Francis Hospital
+Grant Medical Center, Aurora BayCare Medical Center
+Grant Medical Center, Abbott Northwestern Hospital
+Grant Medical Center, Akron City Hospital
+Gundersen Lutheran Medical Center, Bethesda North Hospital
+Gundersen Lutheran Medical Center, Avera McKennan Hospital & University Health Center
+Gundersen Lutheran Medical Center, Abbott Northwestern Hospital
+Gundersen Lutheran Medical Center, Akron City Hospital
+Hackensack University Medical Center, Chesterfield General Hospital
+Hackensack University Medical Center, Aurora BayCare Medical Center
+Hackensack University Medical Center, Akron City Hospital
+Hackensack University Medical Center, Aultman Hospital
+Henrico Doctors' Hospital, Cincinnati Children's Hospital Medical Center
+Henrico Doctors' Hospital, Carolinas Medical Center-Mercy
+Henrico Doctors' Hospital, Advocate Good Samaritan Hospital
+Henrico Doctors' Hospital, Aultman Hospital
+Henry Ford Hospital, Beaumont Hospital
+Henry Ford Hospital, Avera McKennan Hospital & University Health Center
+Henry Ford Hospital, Abbott Northwestern Hospital
+Henry Ford Hospital, Akron City Hospital
+Hillcrest Hospital, Carolinas Medical Center-Mercy
+Hillcrest Hospital, Baystate Medical Center
+Hillcrest Hospital, Advocate Good Samaritan Hospital
+Hillcrest Hospital, Aultman Hospital
+Hoag Memorial Hospital Presbyterian, Hillcrest Hospital
+Hoag Memorial Hospital Presbyterian, Carolinas Medical Center-Mercy
+Hoag Memorial Hospital Presbyterian, Baystate Medical Center
+Hoag Memorial Hospital Presbyterian, Aultman Hospital
+Hospital for Special Surgery, Christiana Hospital
+Hospital for Special Surgery, Advocate Good Samaritan Hospital
+Hospital for Special Surgery, Akron City Hospital
+Hospital for Special Surgery, Aultman Hospital
+Hospital of the University of Pennsylvania, Beaumont Hospital
+Hospital of the University of Pennsylvania, Abbott Northwestern Hospital
+Hospital of the University of Pennsylvania, Akron City Hospital
+Hospital of the University of Pennsylvania, Ann and Robert H. Lurie Children's Hospital of Chicago
+Huron Hospital, Children's Hospital Colorado, Aurora
+Huron Hospital, Billings Clinic Hospital
+Huron Hospital, Abbott Northwestern Hospital
+Huron Hospital, Akron City Hospital
+Indiana University Health Methodist Hospital, Huron Hospital
+Indiana University Health Methodist Hospital, Children's Hospital Colorado, Aurora
+Indiana University Health Methodist Hospital, Billings Clinic Hospital
+Indiana University Health Methodist Hospital, Akron City Hospital
+Inova Fair Oaks Hospital, Beaumont Hospital
+Inova Fair Oaks Hospital, Avera McKennan Hospital & University Health Center
+Inova Fair Oaks Hospital, Abbott Northwestern Hospital
+Inova Fair Oaks Hospital, Akron City Hospital
+John Muir Medical Center, Beaumont Hospital
+John Muir Medical Center, Avera McKennan Hospital & University Health Center
+John Muir Medical Center, Abbott Northwestern Hospital
+John Muir Medical Center, Akron City Hospital
+Johns Hopkins Children's Center, Hospital for Special Surgery
+Johns Hopkins Children's Center, Advocate Good Samaritan Hospital
+Johns Hopkins Children's Center, Akron City Hospital
+Johns Hopkins Children's Center, Aultman Hospital
+The Johns Hopkins Hospital, Grant Medical Center
+The Johns Hopkins Hospital, Aurora BayCare Medical Center
+The Johns Hopkins Hospital, Abbott Northwestern Hospital
+The Johns Hopkins Hospital, Akron City Hospital
+Kendall Regional Medical Center, The Christ Hospital
+Kendall Regional Medical Center, Carolinas Medical Center-Mercy
+Kendall Regional Medical Center, Brigham and Women's Hospital
+Kendall Regional Medical Center, Advocate Good Samaritan Hospital
+Kettering Medical Center, Abbott Northwestern Hospital
+Kettering Medical Center, Akron City Hospital
+Kettering Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Kettering Medical Center, Aultman Hospital
+Lakewood Hospital, EMH Regional Medical Center
+Lakewood Hospital, Baylor University Medical Center
+Lakewood Hospital, Abbott Northwestern Hospital
+Lakewood Hospital, Aultman Hospital
+Lankenau Medical Center, Henrico Doctors' Hospital
+Lankenau Medical Center, Cincinnati Children's Hospital Medical Center
+Lankenau Medical Center, Advocate Good Samaritan Hospital
+Lankenau Medical Center, Aultman Hospital
+LDS Hospital, Fairview Hospital
+LDS Hospital, Brigham and Women's Hospital
+LDS Hospital, Advocate Good Samaritan Hospital
+LDS Hospital, Aultman Hospital
+Massachusetts General Hospital, Bon Secours St. Francis Hospital
+Massachusetts General Hospital, Abbott Northwestern Hospital
+Massachusetts General Hospital, Akron City Hospital
+Massachusetts General Hospital, Aultman Hospital
+Mayo Clinic, Hospital of the University of Pennsylvania
+Mayo Clinic, Beaumont Hospital
+Mayo Clinic, Abbott Northwestern Hospital
+Mayo Clinic, Ann and Robert H. Lurie Children's Hospital of Chicago
+MedStar Franklin Square Medical Center, Gaston Memorial Hospital
+MedStar Franklin Square Medical Center, Christiana Hospital
+MedStar Franklin Square Medical Center, Baystate Medical Center
+MedStar Franklin Square Medical Center, Akron City Hospital
+Memorial Hermann Memorial City Medical Center, Bethesda North Hospital
+Memorial Hermann Memorial City Medical Center, Beaumont Hospital
+Memorial Hermann Memorial City Medical Center, Avera McKennan Hospital & University Health Center
+Memorial Hermann Memorial City Medical Center, Akron City Hospital
+Mercy Medical Center, Deaconess Hospital
+Mercy Medical Center, Bethesda North Hospital
+Mercy Medical Center, Beaumont Hospital
+Mercy Medical Center, Akron City Hospital
+The Methodist Hospital, Indiana University Health Methodist Hospital
+The Methodist Hospital, Huron Hospital
+The Methodist Hospital, Children's Hospital Colorado, Aurora
+The Methodist Hospital, Billings Clinic Hospital
+MetroHealth Medical Center, Billings Clinic Hospital
+MetroHealth Medical Center, Beaumont Hospital
+MetroHealth Medical Center, Abbott Northwestern Hospital
+MetroHealth Medical Center, Akron City Hospital
+Miami Valley Hospital, Henry Ford Hospital
+Miami Valley Hospital, Beaumont Hospital
+Miami Valley Hospital, Avera McKennan Hospital & University Health Center
+Miami Valley Hospital, Akron City Hospital
+Middlesex Hospital, Cincinnati Children's Hospital Medical Center
+Middlesex Hospital, Baystate Medical Center
+Middlesex Hospital, Advocate Good Samaritan Hospital
+Middlesex Hospital, Aultman Hospital
+Mission Hospital, The Christ Hospital
+Mission Hospital, Carolinas Medical Center-Mercy
+Mission Hospital, Brigham and Women's Hospital
+Mission Hospital, Baystate Medical Center
+Mount Sinai Hospital, Henry Ford Hospital
+Mount Sinai Hospital, Beaumont Hospital
+Mount Sinai Hospital, Avera McKennan Hospital & University Health Center
+Mount Sinai Hospital, Akron City Hospital
+Nationwide Children's Hospital, Lankenau Medical Center
+Nationwide Children's Hospital, Henrico Doctors' Hospital
+Nationwide Children's Hospital, Advocate Good Samaritan Hospital
+Nationwide Children's Hospital, Aultman Hospital
+NewYork-Presbyterian Hospital, Abbott Northwestern Hospital
+NewYork-Presbyterian Hospital, Akron City Hospital
+NewYork-Presbyterian Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+NewYork-Presbyterian Hospital, Aultman Hospital
+North Colorado Medical Center, Memorial Hermann Memorial City Medical Center
+North Colorado Medical Center, Bethesda North Hospital
+North Colorado Medical Center, Avera McKennan Hospital & University Health Center
+North Colorado Medical Center, Akron City Hospital
+North Mississippi Medical Center, Hackensack University Medical Center
+North Mississippi Medical Center, Chesterfield General Hospital
+North Mississippi Medical Center, Aurora BayCare Medical Center
+North Mississippi Medical Center, Akron City Hospital
+Northeast Georgia Medical Center, Duke University Hospital
+Northeast Georgia Medical Center, Abbott Northwestern Hospital
+Northeast Georgia Medical Center, Akron City Hospital
+Northeast Georgia Medical Center, Aultman Hospital
+Northwestern Memorial Hospital, Beaumont Hospital
+Northwestern Memorial Hospital, Abbott Northwestern Hospital
+Northwestern Memorial Hospital, Akron City Hospital
+Northwestern Memorial Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Novant Health Presbyterian Medical Center, Indiana University Health Methodist Hospital
+Novant Health Presbyterian Medical Center, Huron Hospital
+Novant Health Presbyterian Medical Center, Children's Hospital Colorado, Aurora
+Novant Health Presbyterian Medical Center, Billings Clinic Hospital
+NYU Langone Medical Center, Brigham and Women's Hospital
+NYU Langone Medical Center, Advocate Good Samaritan Hospital
+NYU Langone Medical Center, Akron City Hospital
+NYU Langone Medical Center, Aultman Hospital
+Ochsner Medical Center, Inova Fair Oaks Hospital
+Ochsner Medical Center, Beaumont Hospital
+Ochsner Medical Center, Avera McKennan Hospital & University Health Center
+Ochsner Medical Center, Abbott Northwestern Hospital
+The Ohio State University Wexner Medical Center, Bethesda North Hospital
+The Ohio State University Wexner Medical Center, Avera McKennan Hospital & University Health Center
+The Ohio State University Wexner Medical Center, Abbott Northwestern Hospital
+The Ohio State University Wexner Medical Center, Akron City Hospital
+Orthopaedic Hospital of Wisconsin, Brigham and Women's Hospital
+Orthopaedic Hospital of Wisconsin, Advocate Good Samaritan Hospital
+Orthopaedic Hospital of Wisconsin, Akron City Hospital
+Orthopaedic Hospital of Wisconsin, Aultman Hospital
+Penn State Milton S. Hershey Medical Center, Carolinas Medical Center-Mercy
+Penn State Milton S. Hershey Medical Center, Baystate Medical Center
+Penn State Milton S. Hershey Medical Center, Advocate Good Samaritan Hospital
+Penn State Milton S. Hershey Medical Center, Aultman Hospital
+Pocono Medical Center, Beaumont Hospital
+Pocono Medical Center, Abbott Northwestern Hospital
+Pocono Medical Center, Akron City Hospital
+Pocono Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Poudre Valley Hospital, Huron Hospital
+Poudre Valley Hospital, Children's Hospital Colorado, Aurora
+Poudre Valley Hospital, Abbott Northwestern Hospital
+Poudre Valley Hospital, Akron City Hospital
+ProMedica Toledo Hospital, Gundersen Lutheran Medical Center
+ProMedica Toledo Hospital, Bethesda North Hospital
+ProMedica Toledo Hospital, Avera McKennan Hospital & University Health Center
+ProMedica Toledo Hospital, Akron City Hospital
+Providence Hospital, Abbott Northwestern Hospital
+Providence Hospital, Akron City Hospital
+Providence Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Providence Hospital, Aultman Hospital
+Providence Sacred Heart Medical Center, Bethesda North Hospital
+Providence Sacred Heart Medical Center, Beaumont Hospital
+Providence Sacred Heart Medical Center, Avera McKennan Hospital & University Health Center
+Providence Sacred Heart Medical Center, Akron City Hospital
+Rainbow Babies and Children's Hospital, The Methodist Hospital
+Rainbow Babies and Children's Hospital, Indiana University Health Methodist Hospital
+Rainbow Babies and Children's Hospital, Huron Hospital
+Rainbow Babies and Children's Hospital, Children's Hospital Colorado, Aurora
+Rex Hospital, Indiana University Health Methodist Hospital
+Rex Hospital, Huron Hospital
+Rex Hospital, Children's Hospital Colorado, Aurora
+Rex Hospital, Billings Clinic Hospital
+Riverside Methodist Hospital, Huron Hospital
+Riverside Methodist Hospital, Children's Hospital Colorado, Aurora
+Riverside Methodist Hospital, Billings Clinic Hospital
+Riverside Methodist Hospital, Abbott Northwestern Hospital
+Robert Packer Hospital, Beaumont Hospital
+Robert Packer Hospital, Abbott Northwestern Hospital
+Robert Packer Hospital, Akron City Hospital
+Robert Packer Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Ronald Reagan UCLA Medical Center, Evanston Hospital
+Ronald Reagan UCLA Medical Center, Duke University Hospital
+Ronald Reagan UCLA Medical Center, Abbott Northwestern Hospital
+Ronald Reagan UCLA Medical Center, Akron City Hospital
+Roswell Park Cancer Institute, Beaumont Hospital
+Roswell Park Cancer Institute, Abbott Northwestern Hospital
+Roswell Park Cancer Institute, Akron City Hospital
+Roswell Park Cancer Institute, Ann and Robert H. Lurie Children's Hospital of Chicago
+Rush University Medical Center, Hospital for Special Surgery
+Rush University Medical Center, Christiana Hospital
+Rush University Medical Center, Akron City Hospital
+Rush University Medical Center, Aultman Hospital
+Saint Thomas Hospital, Nationwide Children's Hospital
+Saint Thomas Hospital, Henrico Doctors' Hospital
+Saint Thomas Hospital, Advocate Good Samaritan Hospital
+Saint Thomas Hospital, Aultman Hospital
+Sarasota Memorial Hospital, Cincinnati Children's Hospital Medical Center
+Sarasota Memorial Hospital, Carolinas Medical Center-Mercy
+Sarasota Memorial Hospital, Baystate Medical Center
+Sarasota Memorial Hospital, Advocate Good Samaritan Hospital
+Schneck Medical Center, Henry Ford Hospital
+Schneck Medical Center, Beaumont Hospital
+Schneck Medical Center, Avera McKennan Hospital & University Health Center
+Schneck Medical Center, Akron City Hospital
+Scripps Green Hospital, Penn State Milton S. Hershey Medical Center
+Scripps Green Hospital, Carolinas Medical Center-Mercy
+Scripps Green Hospital, Advocate Good Samaritan Hospital
+Scripps Green Hospital, Aultman Hospital
+Spectrum Health Butterworth Hospital, NewYork-Presbyterian Hospital
+Spectrum Health Butterworth Hospital, Abbott Northwestern Hospital
+Spectrum Health Butterworth Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Spectrum Health Butterworth Hospital, Aultman Hospital
+St. Louis Children's Hospital, Carolinas Medical Center-Mercy
+St. Louis Children's Hospital, Brigham and Women's Hospital
+St. Louis Children's Hospital, Advocate Good Samaritan Hospital
+St. Louis Children's Hospital, Aultman Hospital
+St. Luke's Episcopal Hospital, Avera McKennan Hospital & University Health Center
+St. Luke's Episcopal Hospital, Abbott Northwestern Hospital
+St. Luke's Episcopal Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+St. Luke's Episcopal Hospital, Aultman Hospital
+St. Luke's Hospital, Massachusetts General Hospital
+St. Luke's Hospital, Abbott Northwestern Hospital
+St. Luke's Hospital, Akron City Hospital
+St. Luke's Hospital, Aultman Hospital
+St. Vincent Indianapolis Hospital, Carolinas Medical Center-Mercy
+St. Vincent Indianapolis Hospital, Baystate Medical Center
+St. Vincent Indianapolis Hospital, Advocate Good Samaritan Hospital
+St. Vincent Indianapolis Hospital, Aultman Hospital
+Stanford Hospital & Clinics, Abbott Northwestern Hospital
+Stanford Hospital & Clinics, Advocate Good Samaritan Hospital
+Stanford Hospital & Clinics, Ann and Robert H. Lurie Children's Hospital of Chicago
+Stanford Hospital & Clinics, Aultman Hospital
+Texas Children's Hospital, Children's Hospital Los Angeles
+Texas Children's Hospital, Abbott Northwestern Hospital
+Texas Children's Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Texas Children's Hospital, Aultman Hospital
+Thomas Jefferson University Hospital, Hillcrest Hospital
+Thomas Jefferson University Hospital, Carolinas Medical Center-Mercy
+Thomas Jefferson University Hospital, Baystate Medical Center
+Thomas Jefferson University Hospital, Aultman Hospital
+Toledo Children's Hospital, Avera McKennan Hospital & University Health Center
+Toledo Children's Hospital, Abbott Northwestern Hospital
+Toledo Children's Hospital, Akron City Hospital
+Toledo Children's Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago
+Tri-City Medical Center, Mayo Clinic
+Tri-City Medical Center, Beaumont Hospital
+Tri-City Medical Center, Abbott Northwestern Hospital
+Tri-City Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Trinity Rock Island, Beaumont Hospital
+Trinity Rock Island, Abbott Northwestern Hospital
+Trinity Rock Island, Akron City Hospital
+Trinity Rock Island, Ann and Robert H. Lurie Children's Hospital of Chicago
+UAB Hospital, Nationwide Children's Hospital
+UAB Hospital, Lankenau Medical Center
+UAB Hospital, Henrico Doctors' Hospital
+UAB Hospital, Advocate Good Samaritan Hospital
+UC San Diego Medical Center, Duke University Hospital
+UC San Diego Medical Center, Aurora BayCare Medical Center
+UC San Diego Medical Center, Abbott Northwestern Hospital
+UC San Diego Medical Center, Akron City Hospital
+UCSF Medical Center, Billings Clinic Hospital
+UCSF Medical Center, Beaumont Hospital
+UCSF Medical Center, Akron City Hospital
+UCSF Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+University Hospital, Hillcrest Hospital
+University Hospital, Carolinas Medical Center-Mercy
+University Hospital, Baystate Medical Center
+University Hospital, Aultman Hospital
+University Hospitals Case Medical Center, Orthopaedic Hospital of Wisconsin
+University Hospitals Case Medical Center, Brigham and Women's Hospital
+University Hospitals Case Medical Center, Advocate Good Samaritan Hospital
+University Hospitals Case Medical Center, Akron City Hospital
+University Medical Center at Princeton at Plainsboro, Rainbow Babies and Children's Hospital
+University Medical Center at Princeton at Plainsboro, The Methodist Hospital
+University Medical Center at Princeton at Plainsboro, Indiana University Health Methodist Hospital
+University Medical Center at Princeton at Plainsboro, Huron Hospital
+University of Chicago Medical Center, LDS Hospital
+University of Chicago Medical Center, Brigham and Women's Hospital
+University of Chicago Medical Center, Advocate Good Samaritan Hospital
+University of Chicago Medical Center, Aultman Hospital
+University of Colorado Hospital, Christiana Hospital
+University of Colorado Hospital, Baystate Medical Center
+University of Colorado Hospital, Akron City Hospital
+University of Colorado Hospital, Aultman Hospital
+University of Iowa Hospitals and Clinics, Brigham and Women's Hospital
+University of Iowa Hospitals and Clinics, Advocate Good Samaritan Hospital
+University of Iowa Hospitals and Clinics, Akron City Hospital
+University of Iowa Hospitals and Clinics, Aultman Hospital
+University of Maryland Medical Center, Pocono Medical Center
+University of Maryland Medical Center, Beaumont Hospital
+University of Maryland Medical Center, Abbott Northwestern Hospital
+University of Maryland Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+University of Michigan Medical Center, Brigham and Women's Hospital
+University of Michigan Medical Center, Advocate Good Samaritan Hospital
+University of Michigan Medical Center, Akron City Hospital
+University of Michigan Medical Center, Aultman Hospital
+University of Toledo Medical Center, Abbott Northwestern Hospital
+University of Toledo Medical Center, Akron City Hospital
+University of Toledo Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+University of Toledo Medical Center, Aultman Hospital
+University of Washington Medical Center, Johns Hopkins Children's Center
+University of Washington Medical Center, Advocate Good Samaritan Hospital
+University of Washington Medical Center, Akron City Hospital
+University of Washington Medical Center, Aultman Hospital
+UPMC Presbyterian, Mission Hospital
+UPMC Presbyterian, The Christ Hospital
+UPMC Presbyterian, Carolinas Medical Center-Mercy
+UPMC Presbyterian, Baystate Medical Center
+Vanderbilt University Medical Center, Children's Hospital of Pittsburgh
+Vanderbilt University Medical Center, Barnes-Jewish Hospital
+Vanderbilt University Medical Center, Akron City Hospital
+Vanderbilt University Medical Center, Ann and Robert H. Lurie Children's Hospital of Chicago
+Yale-New Haven Hospital, Robert Packer Hospital
+Yale-New Haven Hospital, Abbott Northwestern Hospital
+Yale-New Haven Hospital, Akron City Hospital
+Yale-New Haven Hospital, Ann and Robert H. Lurie Children's Hospital of Chicago

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>EECS 132: Homework Project 2</title>
+</head>
+
+<body>
+<h2>Programming Project 3</h2>
+<h3>Due Friday, October 18 at 11:59pm</h3>
+
+<p>The purpose of this project is to give you practice writing loops.  </p>
+
+<h3>General Guidelines (20% of your grade will be based on using good style)</h3>
+
+<p>
+<ul>
+<li>All methods listed below must be <tt>public</tt> and <tt>static</tt>.</li>
+<li>You may write additional <em>private</em> helper methods, but <em>see the point below about simple code</em>, and do not write helper methods that make your code do extra traversals of the input.</li>
+<li>You should place a comment at the top of the file that contains your name
+and a short description of the purpose of the class.</li>
+<li>You should place a <em>short</em> comment before (directly above) each method describing the method.  The comment should
+be one sentence and describe <em>what</em> the method does, not <em>how</em> it does it.  Do not simply copy the descriptions
+below for your comments.</li>
+<li>You should place a short comment directly above each field (if you have any)
+indicating the purpose of the variable.</li>
+<li>You should place a short comment above each loop explaining how the loop works.  Ideally, you should list the goal of the 
+loop, any required precondition for the loop, and if you can, a good iteration subgoal for the loop.</li>
+<li>Any other complicated code such as code the has lots of if statements or variables should contain <em>short</em> comments to help the reader.  The comments can either be above the code fragment or to the right, aligned in a column.</li>
+<li>If your code is using a loop to modify or create a string, you need to use the <tt>StringBuilder</tt> class from the API.</li>
+<li><strong>Important:</strong> While it is tempting to hunt through the API to find methods of <tt>String</tt> and <tt>StringBuilder</tt> to help you, most of the methods will be too inefficient for good code.  You should limit your code to use the
+<tt>charAt</tt> and <tt>length</tt> methods of <tt>String</tt> and the
+<tt>append</tt>, <tt>charAt</tt>, <tt>setCharAt</tt>, <tt>length</tt>, and <tt>toString</tt> methods of <tt>StringBuilder</tt>.  You may use methods from the <tt>Character</tt>
+class though they are not required.</li>
+<li><strong>Important:</strong> You should not use the commands <tt>break</tt> nor <tt>continue</tt> in your loops.</li>
+<li>Remember to use good style: everything should be indented nicely, variables should have good names, there should be a blank line between each method.</li>
+</ul></p>
+
+<p>To submit your project, click on the <em>HW 2</em> link, and you should find a <em>Submit</em> link.  Attach your
+Java file and your testing report.
+Remember to attach the files that end in <tt>.java</tt>, not <tt>.class</tt> or <tt>.java~</tt>.</p>
+
+<h3>Part I: Programming (60% of your grade will be correctness of the following)</h3>
+
+<p>Try to keep your code as simple as possible by avoiding traversing the string multiple times.  As a hint, all of the required methods can be done with a single
+traversal of the string(s). <strong>Clarification</strong>: You are not <em>required</em> to code each method so that it only traverses each string once.  For example, doing two traversals
+where each traversal does a single step per character is just as efficient as a single traversal that does two steps per character.  What you need to do is keep your algorithm simple.  
+The fact that each required method can be done with a single traversal is a hint that, if your first attempt requires lots of traversals, there is a simpler way.</p>
+
+<p>Create a class called <tt>HW2</tt> that contains the following methods:
+<ol>
+<li><p><tt>matchingParentheses</tt> takes a <tt>String</tt> as input and returns a <tt>boolean</tt>:<br>
+The method should return true if all the parentheses (if any) in the input are properly matched.  Any closing parenthesis <tt>')'</tt> should be preceded by
+a matching open parenthesis <tt>'('</tt> and there should be exactly one open parenthesis for each closed parenthesis.
+ <br>
+<tt>matchingParentheses("This is a (test (of the) (matching)) parentheses")</tt> should return <tt>true</tt><br>
+<tt>matchingParentheses("The (second closing) parenthesis) does not match")</tt> should return <tt>false</tt>
+</p></li>
+
+<li><p><tt>everyNthExcept(String string, int start, int skip, int except)</tt> returns a <tt>String</tt><br>
+Returns every <tt>skip</tt>th character of <tt>string</tt>, starting with the <tt>start</tt>-th character, except
+do not include the character if it is one of the <tt>except</tt>-th characters from <tt>start</tt>.  For example:
+<tt>everyNthExcept(s, 2, 2, 4)</tt> should include every 2nd character of <tt>s</tt>, starting with the second character
+of <tt>s</tt>, but it does not include every 4th character after the second character of <tt>s</tt>.
+You can assume <tt>start</tt>, <tt>skip</tt>, and <tt>except</tt> are all positive.<br>
+<tt>everyNthExcept("abcdefghijklmnop", 2, 2, 4)</tt> should return <tt>"bdhlp"</tt><br>
+<tt>everyNthExcept("abcdefghijklmnop", 3, 2, 4)</tt> should return <tt>"ceim"</tt>
+</p></li>
+
+
+<li><p><tt>reverseDigits</tt> should take a <tt>String</tt> as input and output a <tt>String</tt>.<br>
+The output <tt>String</tt> should be identical to the input <tt>String</tt> except all digits (0 through 9) of
+the input <tt>String</tt> are in reverse order (but same locations) in the output <tt>String</tt>.<br>
+<tt>reverseDigits("0 the d1gits of the2 string3 4 are8 reversed 9!")</tt> should return <tt>"9 the d8gits of the4 string3 2 are1 reversed 0!"</tt>
+</p></li>
+
+<li><p><tt>editOut</tt> should take a <tt>String</tt> as input and output a <tt>String</tt>.<br>
+You may assume the input <tt>String</tt> has properly matched parentheses. <em>The behavior for improperly matched parentheses is up to you, but the method should not crash.</em>
+The output <tt>String</tt> should be identical to the input <tt>String</tt> except that any text inside a pair of matched parentheses is removed, including the parentheses.
+In addition, if there is a pair of matched parentheses inside the removed text, that text should be retained (though the parentheses should be removed).  If there are any matched parentheses
+inside the retained text, that text should be removed, and so on.<br>
+<tt>editOut("this is an (unusual (example)) of (editing out and (retaining)) text")</tt> should return <tt>"this is an example of retaining text"</tt></br>
+<tt>editOut("this is (another) (example) showing (((((removal))))) -( and )- ((((retention))))")</tt> should return <tt>"this is&nbsp;&nbsp;&nbsp;showing&nbsp;&nbsp-- retention"</tt>
+</p>
+</li>
+
+<li><p><tt>replaceText</tt> takes two <tt>String</tt>s as input and returns a <tt>String</tt>.<br>
+Each input string will have text with zero or more substrings marked by matching parentheses.
+The returned string should contain the contents of the first string, except that 
+each substring that is inside parentheses in the first input string is replaced by the 
+matching substring that is inside parentheses in the second input string.  (So the first substring of string 1
+is replaced by the first substring of string 2, the second by the second, and so on.)  If the first input string has more
+substrings in matching parentheses than the second string does, the substrings are simply removed.
+If the second string has more substrings in matching parentheses, these are ignored.
+Any nested and matched parentheses (matched parentheses inside the outer set of matched parentheses) should be treated as regular characters.<br>
+<tt>replaceText("a (simple) programming (example)", "(cool) (problem)")</tt> should return <tt>"a cool programming problem"</tt><br>
+<tt>replaceText("a ((nested) example) with (three) replacements (to (handle))", "the replacements are (answer) and (really (two) not three)")</tt> should return <tt>"an answer with really (two) not three replacements "</tt>
+<br>
+As before, the behavior for unmatched parentheses is up to you, but your method should not crash.
+</p></li>
+
+<li><p><strong>Extra Credit:</strong> <tt>reverseAll</tt> should take a <tt>String</tt> and return a <tt>String</tt><br>
+All substrings inside matching parentheses should be reversed.  If the reversed portion contains matching parentheses, these should be "re-reversed" and so on.
+The parentheses should still be correctly matched and nested about the different affected substrings.<br>
+<tt>reverseAll("a b (c d e (f g) (h (i j k l (m n o) (p q)) r s t)) (u v w) x y z")</tt> should return <tt>"a b ((h ((p q) (m n o) l k j i) r s t) (f g) e d c) (w v u) x y z"</tt>
+</p></li>
+
+</ol></p>
+
+<h3>Part 2: Project Testing (20% of your project grade)</h3>
+
+<p>You need to write tests for each of the methods above.  Your tests should be thorough.
+Your testing report should describe why your test cases sufficiently tested your code as well as the specific tests you ran and their results.
+If you are unable to complete a method above, you should still
+describe tests that would test the method had it been completed.</p>
+
+<p>Hints for testing loops.  Your tests need to, at the minimum cover the following cases:
+<ol>
+<li><strong>Test 0, test 1, test many:</strong>  This means you have to test cases where the parameters, if they are integers,
+are 0, 1 or some value other than 1.  If the parameters are strings, you have to test strings of length 0, 1, and more than 1.
+If the strings must contain certain data, you need to test cases where they contain 0, 1, and more than 1 of the desired data.</li>
+<li><strong>Test first, last, and middle:</strong>  In cases where you have to search in or modify a string, you need to test
+cases where the item to be found or modified is the first character of the string, the last character of the string, or somewhere
+in the middle of the string.</li>
+</ol></p>
+
+<p>In summary, your tests should cover each of the above cases for each of the methods you complete in the homework.
+Your testing report should state what <em>test 0, test 1, test many</em> and <em>test first, last, and middle</em> mean for each of the homework
+methods and how your tests covered these cases.</p>
+
+<p><strong>JUnit</strong>: you will be learning about JUnit soon in a lab.  JUnit will be required for future homeworks, and you are welcome
+to use it with this homework.  If you choose to write JUnit tests for your code,
+your report should not list the specific tests and their results because the graders can run your JUnit tests.
+Instead, your report should only detail what <em>test 0, test 1, test many</em> and <em>test first, last, and middle</em> means for each
+method and why your JUnit tests cover those cases.
+</body>
+
+</html>

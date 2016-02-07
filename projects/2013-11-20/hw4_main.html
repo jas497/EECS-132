@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>EECS 132: Homework Project 4</title>
+</head>
+
+<body>
+<h2>Programming Project 4</h2>
+<h3>Due Wednesday, November 20 at 11:59pm</h3>
+
+<p>The purpose of this project is to create an object hierarchy.</p>
+
+<p>To submit your project, click on the <em>Project 4</em> link, and you should find a <em>Submit</em> link.  Attach your
+Java files and your testing report.
+Remember to attach the file that end in <tt>.java</tt>, not <tt>.class</tt> or <tt>.java~</tt>.</p>
+
+<h3>General Guidelines (20% of your grade will be based on using good style)</h3>
+
+<p>Guidelines continued from past projects:
+<ul>
+<li>You should place a JavaDoc comment at the top of the file that contains your name (with an appropriate tag)
+and a short description of the purpose of the class.</li>
+<li>You should place a <em>short</em> JavaDoc comment before (directly above) each method describing the method.  The comment should
+be one sentence and describe <em>what</em> the method does, not <em>how</em> it does it.  Be certain to use the
+appropriate JavaDoc tags for parameters, return values, and exceptions (if appropriate). </li>
+<li>You should place a short JavaDoc comment directly above any field indicating the purpose of the variable.</li>
+<li>You should place a comment next to any local variable (loop indeces do not need comments) indicating the purpose
+of the variable. </li>
+<li>You should place a short comment above each loop explaining how the loop works.
+Ideally, you should list the goal of the
+loop, any required precondition for the loop, and if you can, a good invariant for the loop.</li>
+<li>The class should be organized so the fields are at the top, then the constructors, then the non-static methods,
+and finally the static methods.  The <tt>main</tt> method should be last.</li>
+<li>There should be an empty line between the end of one method and the start of the JavaDoc comment for the next method.</li>
+<li>All variables and methods should be named according to the standard Java protocol.</li>
+<li>All code should be indented appropriately.</li>
+<li>You need to avoid unnecessary fields in your class. </li>
+<li>Your loops should be simple.  Avoid nested loops unless they are required.</li>
+</ul>
+and some new guidelines for this homework:
+<ul>
+<li>You may add additional classes, interfaces, methods and fields to what is listed below.</li>
+<li>You should not have an object store the same value in multiple fields. (For example, if the parent class has a field that
+stores a value, the class that extends it should not have a field that stores the identical value.)</li>
+<li>Your class hierarchy should be simple and intuitive.  Don't force a class to be a subclass of another if it does not make sense.</li>
+<li>In a good hierarchy will significantly reduce the amount of code you need to write.</li>
+</ul></p>
+
+
+<h3>Programming (60% of the project grade)</h3>
+
+<p>For this project you will implement a simple employee database.  Note that we did a small employee hierarchy as a lecture example.  You can use that as a guide,
+but the specifications below are different and so you should not use exactly the lecture example.</p>
+
+<p>Your project should contain the following classes:
+<ol>
+<li><p><em>SalariedEmployee:</em> a salaried employee is an employee that earns a fixed salary.  The necessary methods for <em>SalariedEmployee</em> are:
+<ol>
+<li><em>constructor:</em> <tt>(String firstName, String lastName, String number, double salary)</tt></li>
+<li><tt>String getFirstName()</tt>: returns the first name of the employee</li>
+<li><tt>String getLastName()</tt>: returns the last name of the employee</li>
+<li><tt>void setName(String firstName, String lastName)</tt>: sets the first and last names for the employee</li>
+<li><tt>String getNumber()</tt>: returns the employee number of the employee</li>
+<li><tt>double getSalary()</tt>: returns the salary of the employee</li>
+<li><tt>void setSalary(double salary)</tt>: sets the salary of the employee</li>
+<li><tt>double getBonus()</tt>: returns the bonus of the employee </li>
+<li><tt>void setBonus(double bonus)</tt>: sets the bonus of the employee</li>
+<li><tt>double getAmountEarned()</tt>: returns the total amount earned by the employee (equals the salary plus the bonus)</li>
+<li><tt>void adjustPay(double percentage)</tt>: increases (or decreases) the salary of the employee by the given percentage (for example, an employee
+earning $50,000 with a 10% adjustment would now have a salary of $55,000).</li>
+<li><tt>String toString()</tt>: Overrides the method of <tt>Object</tt>.  Returns a <tt>String</tt> representation which is in the format <tt>"<em>number</em>: <em>last name</em>, <em>first name</em>. Salaried Employee"</tt></li>
+<li><tt>boolean equals</tt>: Overrides the method of <tt>Object</tt>.  Two employees are equal if both names and the number are equal.</li>
+<li><tt>int compareToByName</tt>: compares the name of this employee to the name of the parameter.  Returns a negative value if this employee's name precedes the parameter's
+in alphabetical order (last name, then first name), returns 0 if this employee has the same name as the parameter, and returns a positive value if this employee's name comes after
+the paramter's name in alphabetical order.</li>
+<li><tt>int compareToByEarnings</tt>: compares the total amount earned by this employee to that of the parameter.  Returns a negative value if this employee earns less,
+returns 0 if this employees earn the same amount as the parameter, and returns a positive value if this employee earns more than the parameter.</li>
+<li><tt>void setSupervisor</tt>: sets the supervisor for the employee.  The supervisor must be one of the three supervisor types listed below.</li>
+<li><tt>getSupervisor()</tt>: returns the supervisor for the employee.</li>
+</ol></p></li>
+
+<li><p><em>HourlyEmployee:</em> an hourly employee is an employee that earns an amount based on an hourly rate .  The necessary methods for <em>HourlyEmployee</em> are:
+<ol>
+<li><em>constructor:</em> <tt>(String firstName, String lastName, String number, double hourlyRate)</tt></li>
+<li><tt>String getFirstName()</tt>: returns the first name of the employee</li>
+<li><tt>String getLastName()</tt>: returns the last name of the employee</li>
+<li><tt>void setName(String firstName, String lastName)</tt>: sets the first and last names for the employee</li>
+<li><tt>String getNumber()</tt>: returns the employee number of the employee</li>
+<li><tt>double getHourlyRate()</tt>: returns the hourly rate of the employee</li>
+<li><tt>void setHourlyRate(double rate)</tt>: sets the hourly rate of the employee</li>
+<li><tt>double getHoursWorked()</tt>: returns the number of hours worked by the employee in this pay period</li>
+<li><tt>void setHoursWorked(double hoursWorked)</tt>: sets the hours worked by the employee in this pay period</li>
+<li><tt>double getBonus()</tt>: returns the bonus of the employee </li>
+<li><tt>void setBonus(double bonus)</tt>: sets the bonus of the employee</li>
+<li><tt>double getAmountEarned()</tt>: returns the total amount earned by the employee (equals the hourly rate times the hours worked plus the bonus)</li>
+<li><tt>void adjustPay(double percentage)</tt>: increases (or decreases) the hourly rate of the employee by the given percentage</li>
+<li><tt>String toString()</tt>: Overrides the method of <tt>Object</tt>.  Returns a <tt>String</tt> representation which is in the format <tt>"<em>number</em>: <em>last name</em>, <em>first name</em>. Hourly Employee"</tt></li>
+<li><tt>boolean equals</tt>: Overrides the method of <tt>Object</tt>.  Two employees are equal if both names and the number are equal.</li>
+<li><tt>int compareToByName</tt>: compares the name of this employee to the name of the parameter.  Returns a negative value if this employee's name precedes the parameter's
+in alphabetical order (last name, then first name), returns 0 if this employee's has the same name as the parameter, and returns a positive value if this employee's name comes after
+the paramter's name in alphabetical order.</li>
+<li><tt>int compareToByEarnings</tt>: compares the total amount earned by this employee to that of the parameter.  Returns a negative value if this employee earns less,
+returns 0 if this employees earns the same amount as the parameter, and returns a positive value if this employee earns more than the parameter.</li>
+<li><tt>void setSupervisor</tt>: sets the supervisor for the employee.  The supervisor must be one of the three supervisor types listed below.</li>
+<li><tt>getSupervisor()</tt>: returns the supervisor for the employee.</li>
+</ol></p></li>
+
+<li><p><em>SalesEmployee:</em> an sales employee is an employee that earns a small salary plus a commission on every sale made.  The necessary methods for <em>SalesEmployee</em> are:
+<ol>
+<li><em>constructor:</em> <tt>(String firstName, String lastName, String number, double commission)</tt></li>
+<li><tt>String getFirstName()</tt>: returns the first name of the employee</li>
+<li><tt>String getLastName()</tt>: returns the last name of the employee</li>
+<li><tt>void setName(String firstName, String lastName)</tt>: sets the first and last names for the employee</li>
+<li><tt>String getNumber()</tt>: returns the employee number of the employee</li>
+<li><tt>double getSalary()</tt>: returns the salary of the employee</li>
+<li><tt>void setSalary(double salary)</tt>: sets the salary of the employee</li>
+<li><tt>double getCommission()</tt>: returns the commission of the employee</li>
+<li><tt>void setCommission(double commission)</tt>: sets the commission of the employee</li>
+<li><tt>int getNumSales()</tt>: returns the number of sales made by the employee in this pay period</li>
+<li><tt>void setNumSales(int numSales)</tt>: sets the number of sales by the employee in this pay period</li>
+<li><tt>double getBonus()</tt>: returns the bonus of the employee </li>
+<li><tt>void setBonus(double bonus)</tt>: sets the bonus of the employee</li>
+<li><tt>double getAmountEarned()</tt>: returns the total amount earned by the employee (equals the salary plus the commission times the number of sales plus the bonus)</li>
+<li><tt>void adjustPay(double percentage)</tt>: increases (or decreases) the commission of the employee by the given percentage</li>
+<li><tt>String toString()</tt>: Overrides the method of <tt>Object</tt>.  Returns a <tt>String</tt> representation which is in the format <tt>"<em>number</em>: <em>last name</em>, <em>first name</em>. Sales Employee"</tt></li>
+<li><tt>boolean equals</tt>: Overrides the method of <tt>Object</tt>.  Two employees are equal if both names and the number are equal.</li>
+<li><tt>int compareToByName</tt>: compares the name of this employee to the name of the parameter.  Returns a negative value if this employee's name precedes the parameter's
+in alphabetical order (last name, then first name), returns 0 if this employee has the same name as the parameter, and returns a positive value if this employee's name comes after
+the paramter's name in alphabetical order.</li>
+<li><tt>int compareToByEarnings</tt>: compares the total amount earned by this employee to that of the parameter.  Returns a negative value if this employee earns less,
+returns 0 if this employee earns the same amount as the parameter, and returns a positive value if this employee earns more than the parameter.</li>
+<li><tt>void setSupervisor</tt>: sets the supervisor for the employee.  The supervisor must be one of the three supervisor types listed below.</li>
+<li><tt>getSupervisor()</tt>: returns the supervisor for the employee.</li>
+</ol></p></li>
+
+<li><p><em>SalariedSupervisor:</em> a salaried supervisor is a supervisor that earns a fixed salary.  The necessary methods for <em>SalariedSupervisor</em> are:
+<ol>
+<li><em>constructor:</em> <tt>(String firstName, String lastName, String number, double salary)</tt></li>
+<li><tt>String getFirstName()</tt>: returns the first name of the supervisor</li>
+<li><tt>String getLastName()</tt>: returns the last name of the supervisor</li>
+<li><tt>void setName(String firstName, String lastName)</tt>: sets the first and last names for the supervisor</li>
+<li><tt>String getNumber()</tt>: returns the supervisor number of the supervisor</li>
+<li><tt>double getSalary()</tt>: returns the salary of the supervisor</li>
+<li><tt>void setSalary(double salary)</tt>: sets the salary of the supervisor</li>
+<li><tt>double getBonus()</tt>: returns the bonus of the supervisor </li>
+<li><tt>void setBonus(double bonus)</tt>: sets the bonus of the supervisor</li>
+<li><tt>double getAmountEarned()</tt>: returns the total amount earned by the supervisor (equals the salary plus the bonus)</li>
+<li><tt>void adjustPay(double percentage)</tt>: increases (or decreases) the salary of the supervisor by the given percentage (for example, an supervisor
+earning $50,000 with a 10% adjustment would now have a salary of $55,000).</li>
+<li><tt>String toString()</tt>: Overrides the method of <tt>Object</tt>.  Returns a <tt>String</tt> representation which is in the format <tt>"<em>number</em>: <em>last name</em>, <em>first name</em>. Salaried Supervisor"</tt></li>
+<li><tt>boolean equals</tt>: Overrides the method of <tt>Object</tt>.  Two supervisors (or a supervisor and an employee) are equal if both names and the number are equal.</li>
+<li><tt>int compareToByName</tt>: compares the name of this supervisor to the name of the parameter.  Returns a negative value if this supervisor's name precedes the parameter's
+in alphabetical order (last name, then first name), returns 0 if the supervisor and the parameter have the same name, and returns a positive value if this supervisor's name comes after
+the paramter's name in alphabetical order.</li>
+<li><tt>int compareToByEarnings</tt>: compares the total amount earned by this supervisor to that of the parameter.  Returns a negative value if this supervisor earns less,
+returns 0 if the supervisor earn the same amount as the parameter, and returns a positive value if this supervisor earns more than the parameter.</li>
+<li><tt>void setSupervisor</tt>: sets the supervisor for the supervisor.  The supervisor must be one of the three supervisor types listed below.</li>
+<li><tt>getSupervisor()</tt>: returns the supervisor for the supervisor.</li>
+</ol></p></li>
+
+<li><p><em>HourlySupervisor:</em> an salaried supervisor is a an supervisor that earns a fixed salary.  The necessary methods for <em>HourlySupervisor</em> are:
+<ol>
+<li><em>constructor:</em> <tt>(String firstName, String lastName, String number, double hourlyRate)</tt></li>
+<li><tt>String getFirstName()</tt>: returns the first name of the supervisor</li>
+<li><tt>String getLastName()</tt>: returns the last name of the supervisor</li>
+<li><tt>void setName(String firstName, String lastName)</tt>: sets the first and last names for the supervisor</li>
+<li><tt>String getNumber()</tt>: returns the supervisor number of the supervisor</li>
+<li><tt>double getHourlyRate()</tt>: returns the hourly rate of the supervisor</li>
+<li><tt>void setHourlyRate(double rate)</tt>: sets the hourly rate of the supervisor</li>
+<li><tt>double getHoursWorked()</tt>: returns the number of hours worked by the supervisor in this pay period</li>
+<li><tt>void setHoursWorked(double hoursWorked)</tt>: sets the hours worked by the supervisor in this pay period</li>
+<li><tt>double getBonus()</tt>: returns the bonus of the supervisor </li>
+<li><tt>void setBonus(double bonus)</tt>: sets the bonus of the supervisor</li>
+<li><tt>double getAmountEarned()</tt>: returns the total amount earned by the supervisor (equals the hourly rate times the hours worked plus the bonus)</li>
+<li><tt>void adjustPay(double percentage)</tt>: increases (or decreases) the hourly rate of the supervisor by the given percentage</li>
+<li><tt>String toString()</tt>: Overrides the method of <tt>Object</tt>.  Returns a <tt>String</tt> representation which is in the format <tt>"<em>number</em>: <em>last name</em>, <em>first name</em>. Hourly Supervisor"</tt></li>
+<li><tt>boolean equals</tt>: Overrides the method of <tt>Object</tt>.  Two supervisors (or a supervisor and an employee) are equal if both names and the number are equal.</li>
+<li><tt>int compareToByName</tt>: compares the name of this supervisor to the name of the parameter.  Returns a negative value if this supervisor's name precedes the parameter's
+in alphabetical order (last name, then first name), returns 0 if the supervisor and the parameter have the same name, and returns a positive value if this supervisor's name comes after
+the paramter's name in alphabetical order.</li>
+<li><tt>int compareToByEarnings</tt>: compares the total amount earned by this supervisor to that of the parameter.  Returns a negative value if this supervisor earns less,
+returns 0 if the supervisor earn the same amount as the parameter, and returns a positive value if this supervisor earns more than the parameter.</li>
+<li><tt>void setSupervisor</tt>: sets the supervisor for the supervisor.  The supervisor must be one of the three supervisor types listed below.</li>
+<li><tt>getSupervisor()</tt>: returns the supervisor for the supervisor.</li>
+</ol></p></li>
+
+<li><p><em>SalesSupervisor:</em> an sales supervisor is a an supervisor that earns a small salary plus a commission on every sale made.  The necessary methods for <em>SalesSupervisor</em> are:
+<ol>
+<li><em>constructor:</em> <tt>(String firstName, String lastName, String number, double commission)</tt></li>
+<li><tt>String getFirstName()</tt>: returns the first name of the supervisor</li>
+<li><tt>String getLastName()</tt>: returns the last name of the supervisor</li>
+<li><tt>void setName(String firstName, String lastName)</tt>: sets the first and last names for the supervisor</li>
+<li><tt>String getNumber()</tt>: returns the supervisor number of the supervisor</li>
+<li><tt>double getSalary()</tt>: returns the salary of the supervisor</li>
+<li><tt>void setSalary(double salary)</tt>: sets the salary of the supervisor</li>
+<li><tt>double getCommission()</tt>: returns the commission of the supervisor</li>
+<li><tt>void setCommission(double commission)</tt>: sets the commission of the supervisor</li>
+<li><tt>int getNumSales()</tt>: returns the number of sales made by the supervisor in this pay period</li>
+<li><tt>void setNumSales(int numSales)</tt>: sets the number of sales by the supervisor in this pay period</li>
+<li><tt>double getBonus()</tt>: returns the bonus of the supervisor </li>
+<li><tt>void setBonus(double bonus)</tt>: sets the bonus of the supervisor</li>
+<li><tt>double getAmountEarned()</tt>: returns the total amount earned by the supervisor (equals the salary plus the commission times the number of sales plus the bonus)</li>
+<li><tt>void adjustPay(double percentage)</tt>: increases (or decreases) the commission of the supervisor by the given percentage</li>
+<li><tt>String toString()</tt>: Overrides the method of <tt>Object</tt>.  Returns a <tt>String</tt> representation which is in the format <tt>"<em>number</em>: <em>last name</em>, <em>first name</em>. Sales Supervisor"</tt></li>
+<li><tt>boolean equals</tt>: Overrides the method of <tt>Object</tt>.  Two supervisors (or a supervisor and an employee) are equal if both names and the number are equal.</li>
+<li><tt>int compareToByName</tt>: compares the name of this supervisor to the name of the parameter.  Returns a negative value if this supervisor's name precedes the parameter's
+in alphabetical order (last name, then first name), returns 0 if the supervisor and the parameter have the same name, and returns a positive value if this supervisor's name comes after
+the paramter's name in alphabetical order.</li>
+<li><tt>int compareToByEarnings</tt>: compares the total amount earned by this supervisor to that of the parameter.  Returns a negative value if this supervisor earns less,
+returns 0 if the supervisor earn the same amount as the parameter, and returns a positive value if this supervisor earns more than the parameter.</li>
+<li><tt>void setSupervisor</tt>: sets the supervisor for the supervisor.  The supervisor must be one of the three supervisor types listed below.</li>
+<li><tt>getSupervisor()</tt>: returns the supervisor for the supervisor.</li>
+</ol></p></li>
+
+<li><p><em>EmployeeDatabase:</em> a list of all the employees and supervisors of the company as well as helpful methods. 
+The class should only have a generic constructor that creates an empty list.  The class should have the following features that
+you will need to turn into one or more methods of the same, or slightly modified, names, as appropriate:
+<ol>
+<li><em>add</em>: the add method(s) lets you add an employee or a supervisor object to the database.  The object added should be the parameter to the method.</li>
+<li><em>remove(first name, last name, number)</em> lets you remove an employee or a supervisor that matches the parameters first name, last name, and number.
+The object removed from the database should be returned by the method.  A <tt>NoSuchEmployee</tt> exception should be thrown if no employee or supervisor matching the
+given name and number is in the database.</em></li>
+<li><em>find(first name, last name, number)</em> returns an employee or a supervisor object that matches the parameters first name, last name, and number.
+Throws a <tt>NoSuchEmployee</tt> exception if no employee or supervisor matching the parameter values exists in the database.</li>
+<li><em>getPayrollAmount</em>: returns the total amount that all employees and supervisors earned.</li>
+<li><em>getMaximumEarned</em>: returns the employee or the supervisor who has the largest earnings in the database (break ties arbitrarily).  Returns <tt>null</tt>
+if there are no emploees or supervisors in the database.</li>
+<li><em>getMinimumEarned</em>: returns the employee or the supervisor who has the least earnings in the database (break ties arbitrarily).  Returns <tt>null</tt>
+if there are no emploees or supervisors in the database.</li>
+<li><em>getMaxSales</em>: returns the employee or the supervisor who has the largest number of sales (break ties arbitrarily). Throws a <tt>NoSuchEmployee</tt> exception
+if there are no sales employees or sales supervisors in the database.</li>
+<li><em>getMinSales</em>: returns the employee or the supervisor who has the least number of sales (break ties arbitrarily). Throws a <tt>NoSuchEmployee</tt> exception
+if there are no sales employees or sales supervisors in the database.</li>
+<li><em>getMaxHoursWorked</em>: returns the employee or the supervisor who worked the most hours (break ties arbitrarily). Throws a <tt>NoSuchEmployee</tt> exception
+if there are no hourly employees or hourly supervisors in the database.</li>
+<li><em>getMinHoursWorked</em>: returns the employee or the supervisor who worked the fewest hours (break ties arbitrarily). Throws a <tt>NoSuchEmployee</tt> exception
+if there are no hourly employees or hourly supervisors in the database.</li>
+<li><em>getSupervisees(supervisor)</em>: takes a supervisor object as input and returns an array that contains all the employee and supervisor objects
+that the parameter supervisor supervises.  (The order of the objects in the array does not matter, but the length of the array should equal the total number
+of supervisees.)</li>
+</ol></p></li></ol>
+
+
+<h3>JUnit Testing (20% of your project grade)</h3>
+
+<p>You are to write JUnit tests for your classes as well as a testing report.  The testing report should describe the <em>kinds</em> of tests that are required
+for this project.  The JUnit testing classes should have comments and testing method names matching the specific tests to the descriptions in your report.</p>
+
+<h3>Extra Credit:</h3>
+
+<p>Write a <tt>main</tt> method for the <tt>EmployeeDatabase</tt> class.  The main method should create an empty database, and then the method should allow user input
+(using the <tt>Scanner</tt> class) to manipulate the database, and the results should be output using <tt>System.out.print</tt>.  Here are some examples:
+<pre>
+> add salary John Lee 5 40000
+Added 5: Lee, John, Salary Employee, with salary $40000.0 to the database
+> add salarysupervisor Mary Cohen 4S 60000
+Added 4S: Cohen, Mary, Salary Supervisor with salary $60000.0 to the database
+> find John Lee 5
+Retrieved 5: Lee, John, Salary Employee.
+> set bonus 400.0
+Set bonus for 5: Lee, John, Salary Employee to $400.0
+> get bonus
+Bonus for 5: Lee, John, Salary Employee is $400.0
+> set supervisor Mary Cohen 4S
+Set supervisor for 5: Lee, John, Salary Employee to 4S: Cohen, Mary, Salary Supervisor 
+> find Mary Cohen 4S
+Retrieved 4S: Cohen, Mary, Salary Supervisor.
+> get supervisees
+The list of supervisees for 4S: Cohen, Mary, Salary Supervisor is:
+  5: Lee, John, Salary Employee
+> find Thomas Smith 34
+> No such employee
+</pre>
+</p>
+
+</body>
+
+</html>

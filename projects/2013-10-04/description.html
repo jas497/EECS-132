@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>EECS 132: Programming Project 1</title>
+</head>
+
+<body>
+<h2>Programming Project 1</h2>
+<h3>Due Friday, October 4 at 11:59pm</h3>
+
+<p>In this programming project, you will write the code needed to implement a brokerage account.
+In a "real world" application, code such as this would be tied to a database.  Here, we will just
+focus on the processing that is required to keep track of value, capital gain earned, and debt.
+The purpose of this project is to give you practice writing classes and methods,
+manipulating variables of both primitive and non-primitive types, and writing <tt>if</tt> statements.</p>
+
+<h3>General Guidelines (20% of your grade will be based on using good style)</h3>
+
+<p>Here are some guidelines for the lab:
+<ul>
+<li>All methods listed below must be <tt>public</tt>.</li>
+<li>You will need to create several instance fields to store data, and all fields should be <tt>private</tt>.</li>
+<li>All fields and variables should be given appropriate and descriptive names.</li>
+<li>Unless otherwise stated, all fields and methods should be <em>non-static</em>.</li>
+<li>All fields should be initialized to appropriate values.  Even if you feel that the default Java value is appropriate,
+you should still explicitly initialize the field.  The field should be initialized either as part of the declaration statement or
+in the class constructor.</li>
+<li>You should organize your class by placing all fields at the beginning of the class,
+the constructors next, and finally the methods.</li>
+<li>You will not need any loop statements in the classes below, and you should not use loop statements.  
+Each of the methods below can be written using
+<tt>if</tt> statements, assignment statements, arithmetic, comparison, and boolean operators, return statements, dot and new operators, and method calls.
+You may use loop statements in your testing report.</li>
+<li>All code should follow good style (see page 689 of the Lewis book for an example guideline).  All code should be indented consistently 
+(the exact number of spaces is up to you, but it should be at least 2 and it should be consistent
+through your code), operators should have
+spaces around them, there should be an empty line between methods.  You need to be consistent in your use of { }, and the closing } must always be
+on its own line and indented the same as the line with the opening {. </li>
+<li>You should place a comment at the top of each file that contains your name
+and a short description of the purpose of the class.</li>
+<li>You should place a <em>short</em> comment before (directly above) each method describing the method.  The comment should
+be one sentence and describe <em>what</em> the method does, not <em>how</em> it does it.  Do not simply copy the descriptions
+below for your comments.</li>
+<li>You should place a short comment directly above each field and directly above or to the right of each local variable
+indicating the purpose of the variable.</li>
+<li>If wish to add a comment explaining how complicated code is works (a very good idea!), the comment should go inside the method body and
+either immediately above or to the right of the code.  Comments placed on the right should be nicely aligned in a column.</li>
+<li>Any method whose name begins with <tt>set</tt> should only assign a value to an appropriately
+named variable.  The method should do no other processing.  Any processing described in a <tt>set</tt>
+method description below is for information only.  That actual processing will be done by other methods.
+</li>
+<li>Any method whose name begins with <tt>get</tt> should only return the appropriate value.
+No other processing should occur in these methods.</li>
+<li>You are welcome to add additional helper methods that you feel would be useful, but <em>any additional methods should be private</em>
+and <em>the result of calling the methods listed here must match their descriptions</em>.</li>
+<li>While it may seem that there are a lot of methods, do not get intimidated by this!  Most
+of the methods have exactly the same form and you will find they get easier as you get the
+hang of it.  Start with the first class and code one method at a time.  Don't try to
+figure out all the variables/fields you need at first, but add them as needed for the methods.</li></ul></p>
+
+<p>To submit your project, click on the <em>Project 1</em> link, and you should find a <em>Submit</em> link.  Attach your
+four Java files and your testing report.
+Remember to attach the files that end in <tt>.java</tt>, not <tt>.class</tt> or <tt>.java~</tt>.</p>
+
+<h3>Part I: Programming (60% of your grade will be program correctness)</h3>
+
+<p>Create the following classes:</p>
+
+<ol>
+<li><p>The Stock class.  The Stock class represents a stock account.  The class should have the following methods:
+<ol type="a">
+<li><p><tt>String getCompanyName():</tt> returns the company name for the stock.</p></li>
+<li><p><tt>void setCompanyName(String name):</tt> changes the company name for the stock.</p></li>
+<li><p><tt>String getTickerSymbol():</tt> returns the stock market ticker symbol.</p></li>
+<li><p><tt>void setTickerSymbol(String tickerSymbol):</tt> changes the stock market ticker symbol.</p></li>
+<li><p><tt>double getCurrentPrice():</tt> returns the current price for a share of the stock.</p></li>
+<li><p><tt>void setCurrentPrice(double price):</tt> changes the current price of a share of the stock.</p></li>
+<li><p><tt>int getNumberShares():</tt> returns the number of shares owned in the stock.</p></li>
+<li><p><tt>double getCostBasis():</tt> returns the cost basis for the owned shares.</p></li>
+<li><p><tt>double getCapitalGains():</tt> returns the total capital gains earned so far.</p></li>
+<li><p><tt>double buy(int numShares, double commission):</tt> increases the number of shares owned in the stock by <tt>numShares</tt>.
+Increases the cost basis for the owned shares by (<tt>numShares</tt> <tt>x</tt> the current price) + <tt>commission</tt>.
+Returns the (<tt>numShares</tt> <tt>x</tt> the current price) + <tt>commission</tt>.</p></li>
+<li><p><tt>double sell(int numShares, double commission):</tt> if <tt>numShares</tt> is greater than the number currently owned, returns 0 and makes no other changes.
+Otherwise, the number of shares owned is decreased by <tt>numShares</tt>.  The cost basis is decreased by the ratio of <tt>numShares</tt> to the number of shares
+originally owned. (For example, if you sell 1/3 of your shares, the cost basis should decrease by 1/3.)  
+The capital gains is increased by the difference between (<tt>numShares</tt> <tt>x</tt> the current price) <tt>-</tt> <tt>commission</tt> and the
+amount that the cost basis decreased.  Returns (<tt>numShares</tt> <tt>x</tt> the current price) <tt>-</tt> <tt>commission</tt>.</p></li>
+<li><p><tt>double split(int ratioNumerator, int ratioDemonimator):</tt>  if either input value is zero, nothing is done and 0 is returned.  
+Otherwise, the number of owned shares changes
+by the ratio <tt>ratioNumerator / ratioDenominator</tt>. (For example, <tt>split(2,1)</tt> should double the number of shares while <tt>split(1,2)</tt> should result in one half the number
+of shares.)  
+If the resulting number of shares contains a fractional share (not a whole number), then the fractional
+share must be sold so that the final number of shares is a whole number.  
+Follow the same logic as for the <tt>sell</tt> method except that no commission is charged,
+ and the value returned should be the same as what would be returned by the <tt>sell</tt> method if the commission were 0.
+If there is no fractional share (the initial result of the split is a whole number), then 0 should be returned.</p></li>
+</ol>
+The Stock class should have two constructors:
+<ol type="a">
+<li><p>One has input <tt>String tickerSymbol, double currentPrice</tt> and sets the ticker symbol and the current price associated with the Stock.</p></li>
+<li><p>One has input <tt>String companyName, String tickerSymbol, double currentPrice</tt> and sets the company name, ticker symbol, and the current price associated with the Stock.</p></li></ol>
+</li>
+
+<li><p>The Cash class.  The Cash class represents an account holding money reserves.
+The class should have the following methods.
+<ol type="a">
+<li><p><tt>double getBalance()</tt>: returns the current balance in the account.</p></li>
+<li><p><tt>double getSavingsRate()</tt>: returns the interest rate applied to positive balances.</p></li>
+<li><p><tt>void setSavingsRate(double savingsRate)</tt>: changes the interest rate applied to positive balances.</p></li>
+<li><p><tt>double getLoanRate()</tt>: returns the interest rate applied to negative balances.</p></li>
+<li><p><tt>void setLoanRate(double loanRate)</tt>: changes the interest rate applied to negative balances.</p></li>
+<li><p><tt>double getLoanLimit()</tt>: returns the loan limit for the account.</li>
+<li><p><tt>void setLoanLimit(double limit)</tt>: changes the loan limit for the account.</li>
+<li><p><tt>double getOverdraftPenalty():</tt> returns the overdraft penalty for the account.</li>
+<li><p><tt>void setOverdraftPenalty(double penalty):</tt> changes the overdraft penalty for the account.</li>
+<li><p><tt>void deposit(double amount):</tt> increases the balance by <tt>amount</tt>.</p></li>
+<li><p><tt>boolean withdraw(double amount):</tt> if <tt>amount</tt> is less than or equal to the current balance, reduces the balance by <tt>amount</tt> and returns
+<tt>true</tt>.  Otherwise returns <tt>false</tt> and makes no change to the balance.</p></li>
+<li><p><tt>void transfer(double amount):</tt> reduces the current balance by <tt>amount</tt>.</p></li>
+<li><p><tt>void processDay():</tt> if the account balance is positive, multiplies the balance by the savings rate (divided by 365) and adds the amount to the
+current monthly interest.  If the account balance is negative, multiplies the balance by the loan rate (divided by 365) and adds the (negative) amount to the 
+current monthly interest.<p></li>
+<li><p><tt>void processMonth():</tt> adds the current monthly interest to the balance and sets the current monthly interest to zero.
+If the account balance plus the current monthly interest was negative and exceeded the (negation) of the loan limit at any time
+that <tt>processDay</tt> was called since the last time <tt>processMonth</tt> was called, the overdraft penalty is subtracted from the balance.</p></li>
+</ol>
+The Cash class should have a single constructor:
+<ol type="a">
+<li><p>It has input <tt>double savingsRate, double loanRate, double loanLimit, double overdraftPenalty</tt> and sets the savings rate, loan rate, loan limit, and
+overdraft penalty associated with the account.</p></li></ol>
+</li>
+
+<li>The Date class.  The Date class will represent a date.  (Java has both Date and Calendar in the API, but both are more complex than needed for this homework.)
+The Date class should have the following methods:
+<ol type = "a">
+<li><p><tt>int getDay()</tt>: returns the day of the date.  The day should be a value between 1 and 31.</p></li>
+<li><p><tt>int getMonth()</tt>: returns the month of the date.  The month should be between 1 and 12.</p></li>
+<li><p><tt>int getYear()</tt>: returns the year of the date.</p></li>
+<li><p><tt>void incrementDay()</tt>: adds 1 to the day of the date.  If the day exceeds the number of days for the month (assume no leap years),
+the day is set to 1 and the month is incremented.  If the month exceeds 12, the month is set to 1 and the year is incremented.</p></li>
+</ol>
+The Date class should have one constructor:
+<ol type = "a">
+<li><p>It has input <tt>int day, int month, int year</tt> and initializes the Date object with the given inputs.  You may assume that the inputs are all valid values.</p></li>
+</ol>
+</li>
+
+<li><p>The Customer class.  The Customer class represents a customer account.
+The class should have the following methods.
+<ol type="a">
+<li><p><tt>String getFirstName()</tt>: returns the first name associated with the account.</p></li>
+<li><p><tt>void setFirstName(String firstName)</tt>: changes the first name associated with the account.</p></li>
+<li><p><tt>String getLastName()</tt>: returns the last name associated with the account.</p></li>
+<li><p><tt>void setLastName(String lastName)</tt>: changes the last name associated with the account.</p></li>
+<li><p><tt>String getAddress()</tt>: returns the address associated with the account.</p></li>
+<li><p><tt>void setAddress(String address)</tt>: changes the address associated with the account.</p></li>
+<li><p><tt>Stock getStockAccount()</tt>: returns a Stock instance associated with this account.</p></li>
+<li><p><tt>void setStockAccount(Stock stockAccount):</tt> changes the Stock instance associated with this account.</p></li>
+<li><p><tt>Cash getCashAccount()</tt>: returns a Cash instance associated with this account.</p></li>
+<li><p><tt>void setCashAccount(Cash cashAccount):</tt> changes the Cash instance associated with this account.</p></li>
+<li><p><tt>double getCommissionAmount():</tt> returns the commission amount for the account.</p></li>
+<li><p><tt>void setCommissionAmount(double commission):</tt> changes the commission amount for the account.</p></li>
+<li><p><tt>Date getDate():</tt> returns a Date instance associated with this account.</p></li>
+<li><p><tt>double currentValue():</tt> returns the Cash balance plus the Stock number of shares times the Stock current price.</p></li>
+<li><p><tt>double getYearlyCapitalGains():</tt> returns the yearly capital gains for the account.</p></li>
+<li><p><tt>void deposit(double amount):</tt> adds <tt>amount</tt> to the Cash balance.</p></li>
+<li><p><tt>boolean withdraw(double amount):</tt> if <tt>amount</tt> is less than or equal to the Cash balance, reduces the Cash balance by <tt>amount</tt> and returns
+<tt>true</tt>.  Otherwise returns <tt>false</tt> and makes no change to the Cash balance.</p></li>
+<li><p><tt>void sellShares(int numShares):</tt> calls the Stock <tt>sell</tt> method with the appropriate commission value and adds the amount returned to the
+Cash balance.</tt></p>
+<li><p><tt>boolean buyShares(int numShares):</tt> if the result of calling the Stock <tt>buy</tt> method with <tt>numShares</tt> and the Customer commission amount would result
+in a current value (i.e. from running the <tt>currentValue</tt> method) that is negative, 
+the <tt>buy</tt> method is not called and <tt>false</tt> is returned.  Otherwise, the Stock <tt>buy</tt> method is called
+with the appropriate values, the Cash balance is reduced by the amount returned from the <tt>buy</tt> method, and <tt>true</tt> is returned.</p></li>
+<li><p><tt>void incrementDate():</tt> calls the associated method of the Date class to increment the date.  Calls the <tt>processDay</tt> method of the Cash object.
+If the month changed as a result of the increment, calls the <tt>processMonth</tt> method of the Cash object.
+If the year changed as a result of the increment, sets the yearly capital gains to the difference between the Stock capital gains and the current Customer yearly
+capital gains.</p></li>
+</ol>
+The Customer class should have two constructors:
+<ol type="a">
+<li><p>One had input <tt>String firstName, String lastName, String Address, double commission, Stock stockAccount, Cash cashAccount, Date date</tt> and sets the
+first name, last name, address, commission amount, Stock object, Cash object, and Date object associated with the account.</p></li>
+<li><p>One had input <tt>double commission, Stock stockAccount, Cash cashAccount, Date date</tt> and sets the
+commission amount, Stock object, Cash object, and Date object associated with the account.</p></li>
+</ol>
+</li>
+</ol></p>
+
+<h3>Part 2: Testing Report (20% of your grade will be on the thoroughness of your testing)</h3>
+
+<p>You are to test every method that you created.  You should copy those tests and your program output to a report,
+and you should submit the report.  Your report will be graded on the thoroughness of your testing, not the correctness of
+the results.  <strong>Important:</strong> Your tests must match your code.  That is, you must
+give the true outputs of your program.  If your program gives an incorrect result or an error, you should try to fix the
+problem and re-run the tests.  If you are unable to fix the problem before the homework deadline, submit the tests with
+the incorrect results and/or error messages.  You should also include a statement highlighting the error.  
+If you do not submit a test report, you will get a 0 on this section, but
+if you are found to have faked your results, you will get a negative score.  In other words, you will be docked more 
+points than this section is worth.</p>
+
+<p>The report should be an English description of each test (what are you testing and what is the expected result of the test), and then, if you are using DrJava,
+ a copy of the code you entered in the interactions pane to do the test plus the result reported by the interactions pane.
+For the getter/setter methods, the tests will be quite simple.  For the more complicated methods that contain <tt>if</tt> statements, you will need to design tests that
+try all the possible branches through the <tt>if</tt> statements in the method.</p>
+
+<p><em>Hint:</em>  Do not wait until the very end to write your testing report.  Putting off the testing report will both make writing the report harder and will run the risk that
+there is an error in your program that you will not find until the last minute.  Instead, each time you complete a set of simple methods or one of the trickier methods,
+test your code, and if everything works copy the tests you did into your report.</p>
+
+<p>Because, for many of you, this is your first time writing a Java class and methods, some testing hints will be provided
+on Blackboard as we get closer to the deadline for the assignment.</p>
+
+<h3>Extra Credit:</h3>
+
+<p>The use of the <tt>int</tt> type for the month is not a satisfactory solution because there is nothing to stop us
+from setting the month to be an possible value, not just 1 through 12.  You will fix this by changing the type of the
+<tt>month</tt> fields and variables to an <em>enum</em> type.  The <em>enum</em> is a non-primitive type that only
+supports a restricted number of values.  For our case, we will restrict the month to be Jan through Dec.</p>
+
+<p>First, read pages 179-182 in the Java in a Nutshell book.  This covers the basics of the enum.  Then, read
+pages 188-189 to learn how to add methods to the enum.</p>
+
+<ol>
+<li>Create an <em>enum</em> in Date class called <tt>Month</tt> that contains the values <tt>JAN</tt> through <tt>DEC</tt>.  The enum needs to be public so that it can be used in
+the Customer class.</li>
+<li>Add a constructor to the enum that sets the maximum days of each month.</li>
+<li>Add a getter method that returns the maxumum number of days each month.</li>
+<li>Change the Date class to set the type of <tt>month</tt> to this enum, and use the above methods to simplify the <tt>incrementDay</tt> methods.</li>
+<li>Make the necessary changes to the Customer class.</li>
+</ol>
+</body>
+
+</html>

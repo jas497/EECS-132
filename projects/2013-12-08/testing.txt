@@ -1,0 +1,175 @@
+Testing report for project due 2013-12-08.  James Starkman, jas497
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: in US_Cities_Hypercube.txt, there should be 128 unique cities.  
+However, the cities of Kansas City, Columbus, Arlington, and Springfield all
+occur twice as often as they should (14 occurrences versus 7).  
+Also: input files must be encoded in ANSI.  File received was in UCS-2 little
+endian; it was converted and included for completeness.
+Furthermore: The project uses the word "Inoculated" to mean a generic cure to
+the infection; in reality, inoculation is preventative, not curing.
+
+Note that files with the @author tag as "Harold Connamacher (originally)" (or
+something to that effect) include text copied from the sample programs.  
+Modifications have been made to this text, but the gist is still his.
+
+IMPORTANT: Submit all files independently; do not archive into one.
+Tests were done with JUnit.  Details on "what test 0, test 1, test many and 
+test first, last, and middle means for each method and why your JUnit tests 
+cover those cases" are below.
+Notes on styling:
+	number of asterisks notes major divisions.  
+	3 for begin/end, 2 for headings, 1 for each part
+	"test 0" is refered to as "none", "test 1" as "one", and "test *" as "*"
+	all ranges denoted as REs or as inequalities
+"You are to write JUnit tests for your classes as well as a testing report. The
+testing report should describe the <i>kinds</i> of tests that are required for
+this project. The JUnit testing classes should have comments and testing method
+names matching the specific tests to the descriptions in your report."
+//80-column check
+//3456789_123456789_123456789_123456789_123456789_123456789_123456789_123456789!
+
+also, several abbreviaitons:
+#define CB     covered_by
+#define KR     "Kind of test required"
+#define fmlnom "First, Middle, Last, None, One, Many testing"
+#define net    "Network (or the Network object associated with this class"
+#define LL     LinkedList //actually a double-linked one, like in the API
+
+***BEGIN REPORT ON LinkedList.java AND LinkedListIterator.java CLASSES***
+Node class is separate, not an inner class.  It could be moved, but this is
+easier.  Same for the iterator returned; it could be inside the main list, but
+is easier to use and test when outside.  All are tested and reported together.
+
+Also, other tests involving doing somehting to each element in the net are 
+assumed to use the LLIterator and the functions provided therein, when
+appropriate.  They will thus have the same problems and results for the [fml]
+problems often associated with lists.  This means that, for example, the usage
+of a foreach loop is not considered a [fml] problem, as the iterator takes
+care of that.  
+
+**Getter and setter functions/methods**
+All should do as the name implies.  Getter should return what was input to
+the setter function.  Some get/set functions will be tested again, later.
+*Node: getNext, setNext, getPrev, setPrev, getElement*
+first, middle, last, none, one, many
+	These do not really apply here.  CB other tests using them.
+*LL: getFront, setFront, getBack, setBack*
+fmlnom
+    These are pointers, and the usual divisions do not apply to get/set.  CB 
+	other tests using them.
+
+**Other methods/functions (LL)**
+Anything more complicated than get/set.
+*addToFront, addToBack*
+KR: simple usage
+	Tested elsewhere.
+*removeFromFront, removeFromBack*
+KR: [fl]nom
+	CB building a list of many, and calling until gone.  Middle tests do not
+	apply here.  
+*isEmpty*
+KR: simple usage
+	Covered elsehwere.
+*iterator*
+KR: simple usage
+	Covered by all tests on next section, LLIterator.
+
+**Other methods/functions (LLIterator)**
+Anything more complicated than get/set.
+*hasNext, next*
+KR: usage
+	CB a foreach loop that functions correctly.
+*remove*
+KR: fmlnom
+	CB testing removal of front and back elements, as well as one in the
+	middle.  Also CB trying until the list is empty and errs; this is (nom)
+*find*
+KR: fmlnom
+	CB filling a list with several values, and finding every one.  Also CB 
+	calling on an empty list, and a list without the given value.  Note that
+	while this function is not absolutely required for the basic funcitonality
+	of the assignment, it is not in one of the three major classes, and is
+	thus thought to be free from the "no extra methods" rule.  If this is not
+	the case, it could be inlined where needed, although that would reduce
+	readability noticably.  
+***END REPORT ON LinkedList.java AND LinkedListIterator.java CLASSES***
+
+***BEGIN REPORT ON Entity.java CLASS***
+Also the Health enum, but that could be inlined.  Separate is easier.
+**Getter and setter functions/methods**
+All should do as the name implies.  Getter should return what was input to
+the setter function.  Some get/set functions will be tested again, later.
+*getName, setName, getHealthStatus, setHealthStatus, getRelations*
+KR: usage
+	CB standard get/set tests; set to a known value and if the get returns the
+	same, it works.  
+
+**Other methods/functions (LLIterator)**
+Anything more complicated than get/set.
+*equals*
+KR: check both cases
+	CB one where the names match, and one where they do not.
+*toString*
+KR: call and check
+	CB doing that and checking to see if both parts, name and health, match.
+	Also CB checking against bad examples, which should be false.
+*compareTo*
+KR: check for all possible return value ranges
+	CB doing that, with names that clearly indicate before or after the given
+	value.  
+***END REPORT ON Entity.java CLASS***
+
+***BEGIN REPORT ON Network.java CLASS***
+**Other methods/functions (LLIterator)**
+Anything more complicated than get/set.
+*addRelation*
+KR: usage
+	CB using it.  Although the data are stored in a LL, the list in question
+	passed an earlier test, and is thus considered free of [fmlnom] errors.  
+	The find() function proves especially convinient here.
+*removeRelation*
+KR: usage
+	See writeup of addRelation, above.  This also involved find()ing each
+	Entity in the _Relations of the other, as well as both in the main
+	Network.  The Network-find should return the sought Entity, while the 
+	_Relations-find should return null, meaning that it is not present.
+	While an exception could be thrown, returning null is easier, simpler, 
+	and can still cause an exception if needed (by dereferencing).
+*addRelations(File)*
+KR: test it with a well-ordered file
+	CB doing that with US_Cities_Hypercube.txt, which is fairly orderly (more
+	so than other test files), which should not break it.  Further CB counting
+	the _Relations of several members of the Network, which should always
+	equal seven (or fourteen, for duplicated entries; both were tested).  
+*addRelations(String...)*
+KR: nom, and another odd value (e.g., 3)
+	CB calling on empty parameters, then multiple params (total number still 
+	evenly divisible by two, though), then one (which should throw an 
+	IllegalArgumentException), then three (same result as one).
+***END REPORT ON Network.java CLASS***
+
+***BEGIN REPORT ON PropagationStudy.java CLASS***
+**Getter and setter functions/methods**
+All should do as the name implies.  Getter should return what was input to
+the setter function.  Some get/set functions will be tested again, later.
+*getNetwork, setNetwork, getInfectionRate, setInfectionRate, 
+getHealRate, setHealRate, getWearRate, setWearRate*
+KR: usage
+	CB standard get/set tests; set to a known value and if the get returns the
+	same, it works.  
+
+**Other methods/functions (LLIterator)**
+Anything more complicated than get/set, excepting methods involving user IO or
+randomness.  That narrows it down to three.
+*infect, inoculate*
+KR: nom
+	CB trying to sicken someone when no-one is in the list, by trying same
+	when one person is, and by trying such when many are.  For inoculate,
+	same, but cure instead of sicken.
+*resetNetwork*
+KR: nom
+	CB calling resetNetwork() on an empty PropagationStudy and on one with
+	several Entity.  In the former case, not crashing should suffice, for
+	there is nothing to clear.  In the latter, the net must be checked for
+	appropriate numbers of Uninfected.
+***END REPORT ON PropagationStudy.java CLASS***

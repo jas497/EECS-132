@@ -1,0 +1,114 @@
+Testing report for project due 2013-10-18
+James Starkman, jas497
+
+Tests were done with JUnit.  Details on "what test 0, test 1, test many and 
+test first, last, and middle means for each method and why your JUnit tests 
+cover
+those cases" are below.
+Notes on styling:
+	number of asterisks notes major divisions.  
+	3 for begin/end, 2 for headings, 1 for each part
+	"test 0" is refered to as "none", "test 1" as "one", and "test *" as "*"
+	all ranges denoted as REs or as inequalities
+
+also, several abbreviaitons:
+#define char  character
+#define str   string
+#define paren parenthese
+#define CB    covered_by
+***BEGIN REPORT ON HW2.java CLASS***
+
+**Other methods/functions**
+Anything more complicated than get/set.
+
+*matchingParentheses(String in)*
+none
+	This is when there are no parens to match.  Covered by testing "foo", 
+	which has no parens.
+one
+	Means when there is exactly one set of parens.  They can be at ends or in
+	middle, although if the one at the ends works then a hybrid should work
+	also.  Note that this logic is going to be used in future tests.
+many
+	Means many parens, and the provided example works well for this.  It has
+	many parens, with multiple levels of nesting.  
+first/last
+	Means whenever parens go first or last.  Tested by clapping an 
+	already-valid string in a pair of parens.  This "kills two birds with 
+	one stone".
+bad tests
+	Means a few bad examples to check that the function is something more 
+	than "return true;".  JUnit covers this because it runs an example of this
+
+
+*everyNthExcept(String string, int start, int skip, int except)*
+none
+	Means a null string, as other input are given to be > 0.  This is 
+	excepted for.  Same with other nonstandard inputs.
+one
+	Means when told to skip by 1, or to except every 1.  This is covered by 
+	various inputs with 1 for various values.
+many
+	Means input ints >1, usually [2-4].  Covered by using ints > 1 in these 
+	tests.
+first
+	Means modify the 1st char of the str.  CB 'a'.
+middle
+	Means several reads and writes from middle of input str.  Covered by most 
+	tests as part of other things.
+last
+	Means modify last part of str.  CB 'p'.  
+
+
+*reverseDigits(String in)*
+none
+	Means an empty str, or at least one without chars [0-9].  CB same.
+one
+	Means has only one digit, with any number of other chars.  CB same.
+many
+	Means multiple numbers to be switched.  Also means more ![0-9] chars.  
+	CB the example statement, and by other tests that include ![0-9].
+first
+	Means a [0-9] is first char of input.  CB the given example.
+middle
+	Means a [0-9] in the midst of the input.  CB the given example.
+last
+	Means a [0-9] is last char of the input.  CB the given example.
+
+
+*editOut(String text)*
+none
+	Means no parens are in input.  CB turning "foo" into "foo".
+one
+	Means one pair of parens to remove.  CB doing just that.
+many
+	Means multiple parens, nested heavily.  Example str "old2" in HW2_Tester
+	is particularly good at showing this.  CB aforementioned old2.
+first
+	Means parens with which to deal occur as 1st char in the input.  CB old1.
+middle
+	Means parens in the middle.  CB all examples.
+last
+	Means parens at end of input to handle.  CB old2, and very well at that.
+
+
+*replaceText(String one, String two)*
+none
+	Means no replacements to make.  CB turning "foo" into "foo".
+one
+	Means one swap to make.  CB a punctuation change.
+many
+	Means many swaps, or an unmatched number of arguments.  CB old1, and the 
+	foo-bar-vacant tests because all are processed as the requirements state.
+first
+	Means parens with old term are at beginning of either str.  CB such 
+	being tested.
+middle
+	Means parens are in middle of either str.  Also means nested parens, where
+	only the outermost ("first level") are evaluated for swapping - inner 
+	parens are either skipped over (1st str) or included in output (2nd str).
+	CB the two examples, with old2 covering nesting.
+last
+	Means parens are at ends of either input str.  CB being present in tests.
+
+***END REPORT ON HW2.java CLASS***

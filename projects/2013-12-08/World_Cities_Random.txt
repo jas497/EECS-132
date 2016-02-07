@@ -1,0 +1,448 @@
+Manila, Rio de Janeiro
+Abidjan, San Francisco
+Athens, Alexandria
+Monterrey, Mexico City
+Baghdad, Lima
+Rio de Janeiro, Tianjin
+San Francisco, Ahmedabad
+Taichung, Lucknow
+Ahmedabad, Paris
+Melbourne, Baghdad
+Washington, Philadelphia
+Recife, Istanbul
+Kiev, Philadelphia
+Recife, Miami
+Guadalajara, Tokyo
+Xi'an, Kinshasa
+Kanpur, Ankara
+Baghdad, Cape Town
+Houston, Kano
+Johannesburg, Porto Alegre
+Kabul, Dongguan
+Bandung, Washington
+Guadalajara, Hangzhou
+San Francisco, Seattle
+Dar es Salaam, Lahore
+Monterrey, Detroit
+Pune, Buenos Aires
+Melbourne, Washington
+Lahore, Sydney
+Kiev, Singapore
+Alexandria, Dallas
+Istanbul, Harbin
+Amman, Hanoi
+Beijing, Luanda
+Bogota, Karachi
+Miami, Kaohsiung
+Ho Chi Minh City, Pune
+Tehran, Boston
+Ahmedabad, Tel Aviv-Yafo
+Boston, Khartoum
+Hong Kong, Lucknow
+Qingdao, Rome
+Shenyang, Dongguan
+Tehran, Faisalabad
+Dongguan, Cairo
+Rome, Rio de Janeiro
+Chennai, Surabaya
+Lucknow, Salvador
+Barcelona, Kanpur
+Tianjin, Lucknow
+Fortaleza, Kabul
+Hong Kong, Dallas
+Bandung, Minneapolis
+Minneapolis, Boston
+Tianjin, Kabul
+Jaipur, Kolkata
+San Francisco, Bandung
+Shenyang, Essen
+Saint Petersburg, Karachi
+Mexico City, Nanjing
+Kaohsiung, Milan
+Kabul, Durban
+Amman, Cape Town
+Essen, Toronto
+Busan, Barcelona
+Tianjin, Kano
+Houston, San Diego
+Porto Alegre, Washington
+Shenzhen, Kanpur
+Tokyo, Amman
+Algiers, Singapore
+Saint Petersburg, Salvador
+Amman, Guadalajara
+Guayaquil, Riyadh
+Jeddah, Dar es Salaam
+Sydney, Minneapolis
+Sydney, Kuala Lumpur
+Detroit, Dar es Salaam
+San Diego, Lagos
+Kinshasa, Singapore
+Porto Alegre, Beijing
+Tokyo, Kano
+Ahmedabad, Mumbai
+Chongqing, Istanbul
+Chongqing, London
+Nanjing, Guangzhou
+Durban, Faisalabad
+Xi'an, Jeddah
+Jeddah, Los Angeles
+Tehran, Chennai
+Osaka, New York
+Algiers, Hanoi
+Hong Kong, Moscow
+Cairo, Kanpur
+Mumbai, Chongqing
+London, Caracas
+Lahore, Madrid
+Moscow, Nanjing
+Nagoya, Melbourne
+Guadalajara, Baghdad
+Kanpur, Riyadh
+Kano, Salvador
+Manila, Guadalajara
+Durban, Osaka
+Lima, Washington
+Athens, Kuala Lumpur
+Tokyo, Qingdao
+Durban, Sao Paulo
+Kaohsiung, San Francisco
+Santiago, Philadelphia
+Chongqing, Buenos Aires
+Miami, Alexandria
+Atlanta, Salvador
+Jeddah, Cairo
+Dhaka, San Diego
+Dongguan, Chongqing
+Tokyo, Chennai
+Moscow, Houston
+Washington, Dongguan
+Nagoya, Osaka
+Xi'an, Recife
+Jeddah, Curitiba
+Kano, Nagoya
+Miami, Karachi
+Guayaquil, Wuhan
+Bogota, Shenzhen
+Ankara, Ho Chi Minh City
+Kabul, Belo Horizonte
+Bandung, Sydney
+Dhaka, Dongguan
+Busan, Saint Petersburg
+Curitiba, Algiers
+Delhi, Surat
+Manila, Kabul
+Dhaka, Kaohsiung
+Kanpur, Pune
+Kano, Washington
+Hong Kong, Dakar
+Tehran, Nanjing
+Melbourne, Kolkata
+Philadelphia, Los Angeles
+Athens, Dhaka
+Shenyang, Bangalore
+Hangzhou, Lagos
+Barcelona, Lima
+Algiers, Chennai
+Abidjan, Athens
+Moscow, Baghdad
+Jeddah, Guangzhou
+Tehran, Chicago
+Delhi, Jakarta
+Hong Kong, Sydney
+Sydney, Montreal
+Algiers, Dongguan
+Recife, Hong Kong
+Athens, Singapore
+Saint Petersburg, Athens
+Shanghai, Manila
+Athens, Chicago
+Minneapolis, Chengdu
+Tehran, Qingdao
+Melbourne, Faisalabad
+Qingdao, Addis Ababa
+Belo Horizonte, Hanoi
+Seattle, Busan
+Fortaleza, Montreal
+Karachi, Kiev
+Lima, Durban
+New York, Chengdu
+Porto Alegre, Lagos
+Ankara, Manila
+Salvador, Guayaquil
+Essen, Tehran
+Bangkok, Belo Horizonte
+Beijing, Lahore
+Sao Paulo, Hanoi
+Paris, Hanoi
+Johannesburg, Durban
+Pyongyang, Caracas
+Bangalore, Casablanca
+Medellin, Chennai
+Jaipur, Montreal
+Durban, Lucknow
+Guadalajara, Lagos
+Detroit, Jeddah
+Caracas, Kano
+Amman, Los Angeles
+Karachi, Rio de Janeiro
+Khartoum, Harbin
+Kabul, Qingdao
+Kiev, Chicago
+Dongguan, Chicago
+Singapore, Bandung
+Ankara, Dongguan
+Chicago, Madrid
+Sao Paulo, Faisalabad
+London, Rome
+Pyongyang, Johannesburg
+Hong Kong, Phoenix
+Surat, Shanghai
+Cairo, Houston
+Addis Ababa, Singapore
+Osaka, Lima
+Dakar, Bangalore
+Xi'an, Amman
+Harbin, Surat
+Barcelona, Taipei
+Addis Ababa, Jaipur
+Lahore, Hanoi
+Kolkata, Montreal
+Curitiba, Milan
+Cape Town, Porto Alegre
+Boston, Saint Petersburg
+Kuala Lumpur, Alexandria
+Nairobi, Shanghai
+Harbin, Kolkata
+Busan, Kiev
+Bangalore, Taichung
+San Francisco, Ankara
+Dakar, Philadelphia
+Chengdu, Monterrey
+Surabaya, Singapore
+San Diego, Durban
+Paris, Fortaleza
+Nanjing, Detroit
+Athens, Surat
+Alexandria, Nairobi
+Pune, Chongqing
+Salvador, Chengdu
+Salvador, Kabul
+Barcelona, Johannesburg
+Abidjan, Hong Kong
+Qingdao, Chennai
+Minneapolis, Shenzhen
+Shanghai, Beijing
+Cape Town, Mexico City
+Taichung, Fortaleza
+Delhi, Tehran
+Guayaquil, Singapore
+Paris, Ho Chi Minh City
+Casablanca, Guadalajara
+Ho Chi Minh City, Delhi
+Chennai, London
+Baghdad, Busan
+Shenyang, Medellin
+Buenos Aires, Khartoum
+Kabul, Recife
+Berlin, Chicago
+Boston, Chicago
+Milan, Kolkata
+Nagoya, Paris
+Athens, Rome
+Toronto, Jaipur
+Qingdao, Melbourne
+Athens, Kaohsiung
+Lagos, Tianjin
+Beijing, Tokyo
+Kinshasa, Dallas
+Dakar, Kanpur
+Hanoi, Phoenix
+Mexico City, Curitiba
+Athens, Paris
+Nanjing, London
+Mumbai, Surabaya
+Amman, Singapore
+Shanghai, Washington
+Taichung, Dhaka
+Minneapolis, Kanpur
+Essen, Bangkok
+Osaka, Kaohsiung
+Paris, Berlin
+Algiers, Istanbul
+Pyongyang, Cape Town
+Guadalajara, Kano
+Dar es Salaam, Shanghai
+Manila, Pune
+Mumbai, Buenos Aires
+Pune, Kolkata
+Beijing, Mexico City
+Beijing, San Diego
+Dakar, Ahmedabad
+Caracas, Busan
+Pyongyang, Seattle
+Paris, Chongqing
+Yangon, Boston
+Baghdad, Shenyang
+New York, Washington
+Ho Chi Minh City, Johannesburg
+Bangalore, Istanbul
+Ankara, Qingdao
+Fortaleza, Chengdu
+Tehran, Jakarta
+Montreal, London
+Sydney, Kiev
+Naples, Tokyo
+Belo Horizonte, Santiago
+Cape Town, Seattle
+Miami, Atlanta
+Amman, Nairobi
+Kanpur, Atlanta
+Los Angeles, Busan
+Khartoum, Kaohsiung
+Delhi, Montreal
+Melbourne, Shanghai
+Tel Aviv-Yafo, Bandung
+Sydney, Kinshasa
+Shenyang, Harbin
+Hanoi, Shanghai
+Berlin, Lahore
+Saint Petersburg, Mexico City
+Shenyang, San Diego
+Karachi, Fortaleza
+Singapore, Guangzhou
+Paris, Saint Petersburg
+Sydney, Addis Ababa
+Surat, Alexandria
+Delhi, Amman
+New York, Los Angeles
+Jaipur, Delhi
+Tel Aviv-Yafo, Lucknow
+Ho Chi Minh City, Chennai
+Ho Chi Minh City, Philadelphia
+Belo Horizonte, Los Angeles
+Johannesburg, Baghdad
+Houston, Xi'an
+Pune, Alexandria
+Atlanta, Taipei
+Lahore, Cape Town
+Beijing, Durban
+Seattle, Lagos
+Tianjin, Surabaya
+Shanghai, Seoul
+Manila, Hyderabad
+Taichung, Dar es Salaam
+Barcelona, Singapore
+Bangkok, Osaka
+Hong Kong, Kaohsiung
+Dongguan, Taipei
+Ho Chi Minh City, Monterrey
+Dar es Salaam, Johannesburg
+Istanbul, Cairo
+Kuala Lumpur, Kinshasa
+Kabul, Taipei
+Washington, Dhaka
+Curitiba, Berlin
+Shanghai, Addis Ababa
+Detroit, Kano
+Singapore, Essen
+Amman, New York
+Jaipur, Melbourne
+Mumbai, Luanda
+Kiev, Kabul
+Surabaya, Phoenix
+Naples, Dakar
+Hanoi, Abidjan
+Madrid, Dallas
+Los Angeles, Surat
+Durban, Saint Petersburg
+Seattle, Porto Alegre
+Kolkata, Detroit
+Seattle, Pune
+Saint Petersburg, Hyderabad
+Shenzhen, Guayaquil
+Lima, Khartoum
+Dongguan, London
+New York, Delhi
+Monterrey, Riyadh
+Riyadh, Curitiba
+Caracas, Sydney
+Shenyang, Bogota
+Seattle, Tokyo
+Nanjing, Sao Paulo
+Recife, New York
+Surat, Miami
+Moscow, Salvador
+Kabul, Abidjan
+Hanoi, Hangzhou
+Barcelona, Khartoum
+Kolkata, Miami
+San Diego, Khartoum
+Surat, Rio de Janeiro
+Kabul, Wuhan
+Milan, Dongguan
+Pyongyang, Guayaquil
+Hyderabad, Dallas
+Dongguan, Casablanca
+Xi'an, Durban
+Porto Alegre, Dallas
+Los Angeles, Miami
+Seattle, Seoul
+Buenos Aires, Seoul
+Surat, Cape Town
+Hangzhou, Chicago
+Lagos, Amman
+Nairobi, Atlanta
+Los Angeles, Paris
+Lahore, Bangalore
+Bogota, Luanda
+Kano, Luanda
+Seoul, Addis Ababa
+Pune, Surabaya
+Bandung, Surabaya
+Kolkata, Barcelona
+Caracas, Dhaka
+Nanjing, Barcelona
+Cairo, Baghdad
+Minneapolis, Ahmedabad
+Salvador, Ho Chi Minh City
+Belo Horizonte, London
+Chongqing, Taichung
+Porto Alegre, Kinshasa
+Tehran, Kiev
+Singapore, Tehran
+Washington, Guadalajara
+Essen, Seattle
+Delhi, Sydney
+Ho Chi Minh City, Dar es Salaam
+Tokyo, Buenos Aires
+Guadalajara, Taipei
+Guangzhou, Philadelphia
+Sydney, Luanda
+Surabaya, Dar es Salaam
+Casablanca, Chennai
+Houston, Ho Chi Minh City
+Madrid, Sydney
+Chongqing, Rome
+Nanjing, Baghdad
+Lagos, Faisalabad
+Curitiba, Caracas
+Abidjan, Bogota
+Moscow, Hanoi
+Kano, Santiago
+Casablanca, Bogota
+Saint Petersburg, Beijing
+Tehran, Bandung
+Miami, Rome
+Guadalajara, Harbin
+Tokyo, Paris
+Recife, Belo Horizonte
+Shanghai, Chengdu
+Tel Aviv-Yafo, Kinshasa
+Melbourne, Guangzhou
+Durban, Curitiba
+Kolkata, Monterrey
+Kiev, Houston
+Curitiba, Chongqing
+Busan, Mexico City
+Fortaleza, Dallas

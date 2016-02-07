@@ -1,0 +1,112 @@
+<html>
+
+<head>
+<title>EECS 132: Project 1, Testing Rerport Guidelines</title>
+</head>
+
+<body>
+<h2>Project 1, Testing Report Guidelines</h2>
+
+<h3>What your report should contain</h3>
+
+<p>First, it should contain a description of how to test each method on the homework description, regardless of
+whether you implemented the method.  Note that you are allowed to test more than one method with a single test,
+but you should not test too many methods with one test.  Otherwise, if the test result is incorrect, you will
+have a hard time telling what was the cause of the error.</p>
+
+<p>For each method you implemented, you are to list the results of performing the test on your code. 
+<em>The results must be accurate. You will lose a lot of points if you report a different result than your code
+gives.</em>  If the result returns an incorrect answer, and you do not have time to correct your code, you are
+to make a note of that in your report.</p>
+
+<h3>How to do your report</h3>
+
+<p>Start your report at the same time that you start coding.  As you test each method, write down the results.  If any tests
+are incorrect, try fixing the method and retesting.  Once you get it working, place the test of the correct method
+in your report.  If you make significant changes to your class, you can go back and retest the old tests to make 
+sure the results are still correct.</p>
+
+<h3>Sample tests for the Stock class</h3>
+
+<p><strong>1. Getter/Setter Methods</strong> The following tests the getter/setter methods of the Stock class.  The value returned by the getter method should match the value 
+set by the setter method.
+<pre>
+> Stock stock = new Stock("T", 35.34)
+> stock.setCompanyName("Verizon");
+> stock.getCompanyName()
+"Verizon"
+> stock.setTickerSymbol("VZ");
+> stock.getTickerSymbol()
+"VZ"
+> stock.setCurrentPrice(50.25);
+> stock.getCurrentPrice()
+50.25
+</pre></p>
+
+<p><strong>2. Constructors</strong> This test verifies that the constructor sets the appropriate values.
+<pre>
+> Stock stock = new Stock("T", 35.34)
+> stock.getTickerSymbol()
+"T"
+> stock.getCurrentPrice()
+35.34
+> stock.getNumberShares()
+0
+> stock.getCapitalGains()
+0.0
+</pre></p>
+
+<p><strong>3. The <tt>buy</tt> method.</strong>  If we purchase 10 shares at 50 dollars per share and a 7 dollar commission, the returned value should be 507.0, the cost basis
+should increase by 507.0, and the number of shares should increase by 10.
+<pre>
+> Stock stock = new Stock("T", 50)
+> stock.buy(10, 7.0)
+507.0
+> stock.getNumberShares()
+10
+> stock.getCostBasis()
+507.0
+> stock.buy(10, 7.0)
+507.0
+> stock.getNumberShares()
+20
+> stock.getCostBasis()
+1014.0
+</pre></p>
+
+<p><strong>4. The <tt>sell</tt> method.</strong> If we sell more than 20 shares, the method should return 0 and nothing happens.
+If we sell 10 shares price 100 with a commission of 7, the cost basis should go down to 507, the capital gains
+should increase by 1000-7 - 507 = 993-507 = 486, and the return value should be 993.  
+If we then sell the remaining shares 10 at price 25 with a commission of 7,
+the costBasis should drop to 0, the capital gains should increase by 250-7 - 507 = 243-507 = -264 resulting in a new capital gains of 222, and 243 should be returned.
+<pre>
+> stock.getNumberShares()
+20
+> stock.getCostBasis()
+1014.0
+> stock.setCurrentPrice(100)
+> stock.sell(30, 7)
+0.0
+> stock.getNumberShares()
+20
+> stock.getCostBasis()
+1014.0
+> stock.sell(10, 7)
+993.0
+> stock.getCostBasis()
+507.0
+> stock.getCapitalGains()
+486.0
+> stock.setCurrentPrice(25)
+> stock.sell(10, 7)
+243.0
+> stock.getCostBasis()
+0.0
+> stock.getCapitalGains()
+222.0
+</pre>
+</p>
+
+</body>
+
+</html>

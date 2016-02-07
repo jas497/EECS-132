@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>EECS 132: Homework Assignment 3 Grading Rubric</title>
+</head>
+
+<body>
+<h2>Programming Project 3 Grading Rubric</h2>
+
+<h3>1. JUnit Testing: 20 points</h3>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>20</td>  <td> The logic of the program is correctly broken into small units, and JUnit tests are written for each unit.
+			The tests capture the situations that can occur
+                        (test 0, test 1, test many, test middle, test edges).  Report correctly describes how the game is broken into
+			units and what should be tested in each unit.</td></tr>
+  <tr><td>18</td>  <td> Similar to 20 except that a few boundary cases that are likely to cause errors were not tested.
+                        </td></tr>
+  <tr><td>15</td>  <td> JUnit tests were written for several units of the game, the JUnit tests tested most of the necessary cases, and a good report
+ 			describing the units was provided, but there were several places where multiple units of the game were combined into a single
+                        longer method, and thus each separate unit of the method could not be individually tested.</td></tr>
+  <tr><td>12</td>  <td> At least two reasonable JUnit tests for the game were completed and a testing report describing the units of the game was supplied.</td></tr>
+  <tr><td>10</td>  <td> At least one reasonable JUnit test for the game was completed. </td><tr>
+  <tr><td>0</td>   <td> No reasonable JUnit testing done.</td></tr>
+</tbody></table>
+              
+<h3>2. Readability: 20 points</h3>
+  <h4> Basic program structure </h4>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>10</td> <td>Correct comments at top of class, above each method, above each field (if any fields are present),
+                      above each loop, and next to or above each variable.  (Comments are -not- required next to any index variables used in the loops.)
+                      The comments are at most one to three sentences and are a good
+                      description.  The comments above each loop indicate how the loop works and any prerequisites for the
+                      loop.  (The loop subgoal/invariant would be nice but is -not- required.)
+                     All code follows the proper indentation and
+                     naming style.  An empty line is placed between the end of one method and the comment of the next.</td></tr>
+  <tr><td>9</td> <td>Mostly indented well (up to two places not indented correctly) AND most names correctly follow the
+                      naming convention (up to two poorly named variables or methods) AND at most one missing comment on a loop or other complicated code.
+                      Each comment is a good description.</td></tr>
+  <tr><td>8</td> <td>Good indentation for at least three of the methods AND at least half of the methods and loops have comments that are at most
+                      1-3 sentences and not direct copies of the homework description.</td></tr>
+  <tr><td>6</td> <td>At least one method is well commented or there is a comment above every method and the class AND at least one method is nicely indented.</td>
+  <tr><td>3</td>  <td>At least one method is well commented OR at least one method is nicely indented.</td></tr>
+  <tr><td>0</td>  <td>No methods have either good comments or good indentation.</td></tr>
+</tbody></table>
+
+  <h4>JavaDoc Comments</h4>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>10</td><td>All comments above the class, fields, and methods follow the JavaDoc comment style.  Correct tags are added
+                     for the author, all method parameters and return types.</td></tr>
+  <tr><td>9</td><td>All comments above the class, fields, and methods follow the JavaDoc comment style, and most of the comments
+                    contain and have correct all required tags. (At most 3 missing or misspelled tags.)</td></tr>
+  <tr><td>7</td><td>Most comments above the class, fields, and methods follow the JavaDoc comment style, but a significant number of places are
+                     missing tags or the tags are misspelled so the comments are not formatted properly on the webpage.</td></tr>
+  <tr><td>5</td><td>Most comments in JavaDoc style of /** but missing most tags OR has most tags but the comments do not start
+                    with /** and so do not appear on the webpage.</td></tr>
+  <tr><td>0</td><td>No JavaDoc comments provided.</td></tr>
+</tbody></table>
+
+
+<h3>3. Correctness: 60 points</h3>
+  <h4>Performance correctness: 40 points</h4>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>40</td> <td>The game runs correctly. </td></tr>
+  <tr><td>36</td> <td>The game runs correctly except for one of the possible errors: fails to correctly identify a button click in some situations OR allows swapping of non-adjacent pieces OR fails to mark the correct pieces OR
+incorrectly marks pieces it should not OR fails to remove pieces after marking them OR fails to slide down pieces to replace the removed pieces OR fails to replace the empty spots at the top
+of the game with random pieces OR fails to detect a win</td></tr>
+  <tr><td>32</td>  <td>The game fails on more than one above condition, but most of the time the game correctly swaps adjacent pieces, marks same colored pieces, removes the marked pieces, and slides down the pieces above the removed pieces.</p>
+  <tr><td>28</td>  <td>In most situations, the game correctly swaps adjacent pieces and marks the appropriate same-colored pieces. </td></tr>
+  <tr><td>24</td>  <td>The program displays a board of buttons, and at least some of the time, the game correctly swaps adjacent pieces.</td></tr>
+  <tr><td>16</td>  <td>The program displays a board of buttons.</td></tr>
+  <tr><td>8</td>  <td>The program at least compiles and does something.</td></tr>
+  <tr><td>0</td>  <td>No working methods or constructors. </td></tr>
+</tbody></table>
+
+  <h4>Main method: 10 points</h4>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tr><td>10</td><td>A good main method that correctly reads the command line arguments to determine the size of the
+board and number of jewels and does something appropriate given incorrect command line arguments.</td></tr>
+  <tr><td>8</td><td>A good main method that correctly reads the command line arguments and launches the game correctly,
+but does not handle error conditions appropriately.</td></tr>
+  <tr><td>6</td><td>The main method correctly launches the basic game, but it does not correctly launch different board
+sizes from the command line arguments.</tr></td>
+  <tr><td>0</td><td>No main method.</td></tr>
+  </tbody></table>
+
+  <h4>Good code design: 10 points</h4> 
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tr><td>10</td><td>The logic for playing the game is relatively simple and easy for the reader to follow.  The names of methods precisely
+match what the methods do.  
+There is no significant duplicated code. </td></tr>
+  <tr><td>9</td><td>The logic for playing the game is relatively simple and easy for the reader to follow.  The names of the methods could
+be more descriptive of their purpose and/or some code parts are duplicates and could be combined.</td></tr>
+  <tr><td>7</td><td>The loops are much more complicated than needed and the logic is challenging for the reader to
+understand.</td></tr>
+  <tr><td>5</td><td>All the code is in one method and it is challenging for the reader to understand the logic.</tr></td>
+  <tr><td>0</td><td>All the code is in one method and very poorly organized.</td></tr>
+  </tbody></table>
+
+  <h4>Penalties:</h4>
+  The following penalties will be applied
+  <table border="2">
+  <thead><tr><th>Points</th><th>Error</th></tr></thead>
+  <tbody>
+  <tr><td>-3</td><td>The use of <tt>break</tt> or <tt>continue</tt> in loops.  <tt>break</tt> is allowed in a <tt>switch</tt> statement.</td></tr>
+  <tr><td>-3</td><td>Unnecessarily long <tt>if</tt> statements.</td></tr>
+  </table>
+
+</body>
+</html>
+

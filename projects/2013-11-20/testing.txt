@@ -1,0 +1,183 @@
+Testing report for project due 2013-11-20.  James Starkman, jas497
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Hierarhcy:
+Employee
+	SalariedEmployee
+		SalariedSupervisor
+		SalesEmployee
+			SalesSupervisor
+	HourlyEmployee
+		HourlySupervisor
+EmployeeDatabase
+ISupervisor
+NoSuchException
+
+IMPORTANT: Submit all dozenish files independently; do not archive into one.
+Tests were done with JUnit.  Details on "what test 0, test 1, test many and 
+test first, last, and middle means for each method and why your JUnit tests 
+cover those cases" are below.
+Notes on styling:
+	number of asterisks notes major divisions.  
+	3 for begin/end, 2 for headings, 1 for each part
+	"test 0" is refered to as "none", "test 1" as "one", and "test *" as "*"
+	all ranges denoted as REs or as inequalities
+"You are to write JUnit tests for your classes as well as a testing report. The
+testing report should describe the <i>kinds</i> of tests that are required for
+this project. The JUnit testing classes should have comments and testing method
+names matching the specific tests to the descriptions in your report."
+//80-column check
+//3456789_123456789_123456789_123456789_123456789_123456789_123456789_123456789!
+
+also, several abbreviaitons:
+#define CB     covered_by
+#define worker "subclass of Employee [or its instance]"
+#define KR     "Kind of test required"
+#define DB     database
+#define fmlnom "First, Middle, Last, None, One, Many testing"
+#define NSEE   NoSuchEmployeeException
+
+***BEGIN REPORT ON Employee.java CLASS AND DERIVATIVES***
+**Getter and setter functions/methods**
+All should do as the name implies.  Getter should return what was input to
+the setter function.  Some get/set functions will be tested again, later.
+
+*getFirstName*
+first, middle, last, none, one, many
+       The usual divisions do not apply to get/set.  CB asserting that it
+       returned the same name as was input to the constructor.  This also tests
+       that.
+*getLastName*
+fmlnom
+	See previous test.
+*setName*
+fmlnom
+       Means nothing here (see previous test).  CB calling and asserting that
+       new values equate to the input.
+*getNumber*
+KR: simple usage.
+    CB doing such, and checking that it is what it should be.
+*setNumber*
+KR: simple usage
+    CB calling and asserting that it worked
+*getBonus*
+KR: simple usage
+    CB calling and asserting that it worked
+*setBonus*
+KR: simple usage
+    CB calling and asserting that it worked
+*getAmountEarned*
+KR: compare against what the calculation should yield
+    CB calling and asserting that the value == what it should (2258.5).
+*setAmountEarned*
+KR: simple usage
+    CB calling and asserting that it worked
+*getSupervisor*
+KR: simple usage
+    CB calling and asserting that it worked
+*setSupervisor*
+KR: simple usage
+    CB calling and asserting that Bob is now the boss of Joe.  Also CB trying
+    the reverse, which should do nothing (Joe is not a Supervisor); Bob's
+    supervisor should still be null.
+*getSalary*
+KR: simple usage
+    CB passing 1234.5 in as the salary in construction and checking.
+*setSalary*
+KR: call and check
+    CB SalesSupervisor-s being subclass of SalariedEmployee-s, and inheriting
+    this.
+*getCommission*
+KR: simple usage
+    CB calling and asserting that it worked
+*setCommission*
+KR: simple usage
+    CB calling and asserting that it worked
+*getHourlyRate*
+KR: simple usage
+    CB calling and asserting that it worked
+*setHourlyRate*
+KR: simple usage
+    CB calling and asserting that it worked
+*getHoursWorked*
+KR: simple usage
+    CB calling and asserting that it worked
+*setHoursWorked*
+KR: simple usage
+    CB calling and asserting that it worked
+
+**Other methods/functions**
+Anything more complicated than get/set.
+
+*adjustPay*
+KR: distributive property: (increment, decrement, no change) times
+    		 	   (Salaried, Sales, Hourly)(Employee).  Nine tests.
+    CB getting the special number to be scaled up or down, calling, and
+    checking if it == what a manual equivalent did.
+
+*toString*
+KR: exhaustive; check all six major classes
+    CB making the objects and asserting
+
+*equals*
+KR: simple usage
+    CB calling and asserting that it works regardless of where on the
+    inheritence tree the objects are.  Includes comparing Sales* to Hourly*.
+
+*compareToByName*
+KR: cover all outcomes, and cross-tree.
+    CB testing for all three outcomes, and two more cross-tree.  
+
+*compareToByEarnings*
+KR: See compareToByName
+    CB setting appropriate hours worked and wages, then same as compareToByName
+
+***END REPORT ON Employee.java CLASS AND DERIVATIVES***
+
+***BEGIN REPORT ON EmployeeDatabase.java***
+**Other methods/functions**
+Anything more complicated than get/set.
+
+*add, remove*
+KR: add, usage.  Remove, fml in DB, no of that type.  Should exit the loop when
+    	 find what looking for, so no m is applicable.
+    Add:CB adding two members to the DB.  This should not have fmlnom problems.
+    Remove:CB first trying to remove from a fresh, empty DB (fmln).  Then do the
+    above adding, then try removing what is not there (*n).  Remove what was 
+    stored, in arbitrary order (fmlo).  Try a bad remove again (fml[no]).
+
+*find*
+KR: fmlnom.  Any problems with One would also exist with F&L, so they cover it.
+    CB calling on a fresh, empty DB.  And then on one with several records, one
+    at the first position, one at the last.  Then try find-ing the bad record
+    again; it should throw an exception.
+    
+*getPayrollAmount*
+KR: fmlnom.  Any problems with One would also exist with F&L, so they cover it.
+    CB calling on empty DB (fmln).  Then add a few entries and try again (flm).
+
+*getMaximumEarned, getMinimumEarned*
+KR: fmlnom.  Any problems with One would also exist with F&L, so they cover it.
+    CB trying both on a new DB (fmln), adding three members in arbitrary order,
+    and trying again (fmlm).  
+
+*getMaxSales, getMinSales*
+KR: fmlnom.  Any problems with One would also exist with F&L, so they cover it.
+    CB trying both on empty DB, fail()-ing if a NSEE is not thrown (fmln).  Then
+    add records and try again.  Non-Sales* should be skipped, and the other
+    records returned instead (Joe had lowest amount earned ($0), but was not
+    returned for getMinSales().  So this works.).
+
+*getMaxHoursWorked, getMinHoursWorked*
+KR: fmlnom.  Any problems with One would also exist with F&L, so they cover it.
+    Another DB walk/scan.  CB trying both on empty DB, fail()-ing if a NSEE is
+    not thrown (fmln).  Then add records and try again.  Non-Hourly* should be
+    skipped, and the other records returned instead (Bob worked no hours, was
+    not returned for getMinHoursWorked(), so he was skipped).
+
+*getSupervisees*
+KR: fmlnom.
+    CB calling on Abraham, with one worker(o).  Then on Joe, with no workers (n)
+    Then on Bob, with 5 workers (m).  All of these require walking the DB, and
+    if there were fml problems they would manifest themselves.  Employees are at
+    both ends, and both are picked up by *Supervisors.  
+

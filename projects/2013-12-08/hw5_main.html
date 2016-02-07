@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>EECS 132: Homework Project 5</title>
+</head>
+
+<body>
+<h2>Programming Project 4</h2>
+<h3>Due Sunday, December 8 at 11:59pm</h3>
+
+<p><strong>As Monday, December 9 is the Reading Day before final exams, <em>no late assignments will be accepted</em>.</strong></p>
+
+<p>The purpose of this project is to practice using linked lists, generic types, and iterators.</p>
+
+<p>To submit your project, click on the <em>Project 5</em> link, and you should find a <em>Submit</em> link.  Attach your
+Java files and your testing report.
+Remember to attach the file that end in <tt>.java</tt>, not <tt>.class</tt> or <tt>.java~</tt>.</p>
+
+<h3>General Guidelines (20% of your grade will be based on using good style)</h3>
+
+<p><strong>Important Rule</strong>: You are to use one of the linked list classes we developed in the course.  It does not matter 
+which one you use.  You may add additional methods as needed to the linked list class, but you should use the linked list efficiently.
+<em>You may not use the <tt>LinkedList</tt> or any other <tt>Collection</tt>s class from the Java API.</em></p>
+
+<p>You may <em>not</em> add additional methods to the classes listed below.</p>
+
+<p>Guidelines continued from past projects:
+<ul>
+<li>You should place a JavaDoc comment at the top of the file that contains your name (with an appropriate tag)
+and a short description of the purpose of the class.</li>
+<li>You should place a <em>short</em> JavaDoc comment before (directly above) each method describing the method.  The comment should
+be one sentence and describe <em>what</em> the method does, not <em>how</em> it does it.  Be certain to use the
+appropriate JavaDoc tags for parameters, return values, and exceptions (if appropriate). </li>
+<li>You should place a short JavaDoc comment directly above any field indicating the purpose of the variable.</li>
+<li>You should place a comment next to any local variable (loop indeces do not need comments) indicating the purpose
+of the variable. </li>
+<li>You should place a short comment above each loop explaining how the loop works.
+Ideally, you should list the goal of the
+loop, any required precondition for the loop, and if you can, a good invariant for the loop.</li>
+<li>The class should be organized so the fields are at the top, then the constructors, then the non-static methods,
+and finally the static methods.  The <tt>main</tt> method should be last.</li>
+<li>There should be an empty line between the end of one method and the start of the JavaDoc comment for the next method.</li>
+<li>All variables and methods should be named according to the standard Java protocol.</li>
+<li>All code should be indented appropriately.</li>
+<li>You need to avoid unnecessary fields in your class. </li>
+<li>Your loops should be simple.  Avoid nested loops unless they are required.</li>
+</ul>
+</p>
+
+
+<h3>Programming (60% of the project grade)</h3>
+
+<p>A current area of research involves modelling propagation on a network.  For example, we can use the model to study how disease spreads in
+a society or how fast information spreads across a social network.</p>
+
+<p>Your project should contain the following classes:
+<ol><li><p>The <em>Entity</em> class.  The entity represents a person, organization, or other entity in the social network.
+The Entity class contains an enum type that indicates the <em>health status</em> of the entity.
+<pre>
+public Enum Health {Uninfected, Infected, Inoculated, BeingInfected, BeingInoculated}
+</pre>
+The Entity class should implement the <tt>Comparable</tt> interface, and entities can be ordered by their <em>name</em>.
+The Entity class contains the following methods:
+<ol><li><p><tt>getName</tt> and <tt>setName</tt>: the name is a <tt>String</tt>.</p></li>
+    <li><p><tt>getHealthStatus</tt> and <tt>setHealthStatus</tt>: the health status is the enum <tt>Health</tt> type.</p></li>
+    <li><p><tt>getRelations</tt>: relations is a linked list that stores <tt>Entity</tt> objects.</p></li>
+    <li><p><tt>equals</tt>: the equals method overrides the one in <tt>Object</tt>.  Two <tt>Entity</tt> objects are equal if they have the same name.</p></li>
+    <li><p><tt>toString</tt>: the string representation should be the name and health status of the entity.</p></li>
+</ol>
+The entity class constructor should take the entity's name as input and set the <em>name</em>, initialize the <em>relations</em> to an empty linked list,
+and initialize the <em>health status</em> to <tt>Uninfected</tt>.</p></li>
+
+<li><p>The <em>Network</em> class.  The network represents the social network of entities.
+The Network class should implement the <tt>Iterable</tt> interface and should contain a linked list that stores all the entities of the network.
+The <tt>Iterator</tt> for the network should iterate over all the entities in the network.
+The Network class contains the following methods:
+<ol><li><p><tt>addRelation</tt> takes two <tt>Entity</tt> objects.  If either entity is not in the network, it is added to the network.  (There should not be duplicate
+entities in the network.)  Then, for each entity, add the other entity to its <em>relations</em> list.</p></li>
+   <li><p><tt>removeRelation</tt> takes two <tt>Entity</tt> objects.  Each entity is removed from the other's <em>relations</em> list.  The entities are <em>not</em>
+removed from the network.</p></li>
+   <li><p><tt>addRelations</tt> takes a <tt>File</tt> parameter.  The file contains a list of relations.  Each relation will be a pair of names.  The names of a relation
+pair are separated by a comma, and each relation pair is on its own line.  For example:
+<pre>
+University Hospitals, Cleveland Clinc
+University Hosptials, Louis Stokes Cleveland VA Medical Center
+Cleveland Clinic, Mercy Regional Medical Center
+</pre>
+The method may throw an exception if there is a problem with the file.  Each pair of names should be added to the network as a relation of <tt>Entity</tt> objects
+with those names.</p>
+   <li><p><tt>addRelations</tt> takes a <em>variable length parameter</em> of <tt>String</tt>s.  There should be an even number of <tt>String</tt>s.  An exception may
+be thrown if there is not an even number.  The method should create <tt>Entity</tt> instances for each <tt>String</tt> and for each pair of names (first two names,
+second two names, etc.) the pair of entities should be added to the network as a relation.</p></li>
+</ol>
+The Network class should have a constructor that takes no input and initializes an empty network.</p></li>
+
+<li><p>The <em>PropagationStudy</em> class.  The <em>PropagationStudy</em> class will run a simulation on the network of entities.  The class should have the following methods:
+<ol><li><p><tt>getNetwork</tt> and <tt>setNetwork</tt>: the network is a <tt>Network</tt> instance associated with this study.</p></li>
+    <li><p><tt>getInfectionRate</tt> and <tt>setInfectionRate</tt>: the infection rate is a double between 0 and 1 (inclusive).</p></li>
+    <li><p><tt>getHealRate</tt> and <tt>setHealRate</tt>: the heal rate is a double between 0 and 1 (inclusive).</p></li>
+    <li><p><tt>getWearRate</tt> and <tt>setWearRate</tt>: the wear rate is a double between 0 and 1 (inclusive).</p></li>
+    <li><p><tt>infect</tt> takes an <tt>Entity</tt> as a parameter.  The matching entity in the network should have its <em>health status</em> set to <tt>Infected</tt>.  Throw a <tt>NoSuchElement</tt> exception if the entity is not in the network.</p></li>
+    <li><p><tt>infect</tt> takes a <tt>double</tt> value between 0 and 1 (inclusive). Each entity in the network will have its <em>health status</em> set to <tt>Infected</tt>
+        with a probability equal to the parameter.  Use <tt>Math.random()</tt> or an equivalent pseudorandom number generator and if the value is less than the parameter value, the entity is infected.</p></li>
+    <li><p><tt>inoculate</tt> takes an <tt>Entity</tt> as a parameter.  The matching entity in the network should have its <em>health status</em> set to <tt>Inoculated</tt>.  Throw a <tt>NoSuchElement</tt> exception if the entity is not in the network.</p></li>
+    <li><p><tt>inoculate</tt> takes a <tt>double</tt> value between 0 and 1 (inclusive). Each entity in the network will have its <em>health status</em> set to <tt>Inoculated</tt>
+        with a probability equal to the parameter.  Use <tt>Math.random()</tt> or an equivalent pseudorandom number generator and if the value is less than the parameter value, the entity is inoculated.</p></li>
+    <li><p><tt>getNumUninfected</tt>, <tt>getNumInoculated</tt>, <tt>getNumInfected</tt>: each method will return the number of entities in the network with the 
+        desired <em>health status</em>.</p></li>
+    <li><p><tt>resetNetwork</tt>: takes no input and changes the <em>health status</em> of every entity in the network to <tt>Uninfected</tt></li></p>
+    <li><p><tt>printNetwork</tt>: prints using <tt>System.out.println</tt> each entities name and health status in the network. The output should be ordered by the
+              names of the entities.</li></p>
+    <li><p><tt>runPropagation</tt>: takes no input and does the following in order.  
+        <ul><li>First, for every entity that is <tt>Infected</tt>, run through all of its <em>relations</em>, and for every relation that is <tt>Uninfected</tt> call
+                <tt>Math.random()</tt> or similar pseudorandom number generator and if the value is less than the <em>infection rate</em>, set the relation's health status
+                to <tt>BeingInfected</tt>.</li>
+            <li>Second, for every entity that is <tt>Infected</tt> call your pseudorandom number generator and if the value is less than the <em>heal rate</em>,
+                set the entity's health status to <tt>BeingInoculated</tt>.</li>
+            <li>Third, for every entity that is <tt>Inoculated</tt> call your pseudorandom number generator and if the value is less than the <em>wear rate</em>,
+                set the entity's health status to <tt>Uninfected</tt>.</li>
+            <li>Fourth, for every entity that is <tt>BeingInfected</tt> set it's health status to <tt>Infected</tt> and for every entity that is <tt>BeingInoculated</tt> set
+                its health status to <tt>Inoculated</tt>.</li></ul>
+     <li><p><tt>runPropagation</tt>: takes an <tt>int</tt> value and calls the above <tt>runPropagation</tt> method a number of times equal to the parameter.  If the parameter
+         is not a positive integer, then the method does nothing.</p></li>
+  </ol>
+  The PropagationStudy class should have a constructor that takes a <em>network</em>, <em>infection rate</em>, <em>heal rate</em>, and <em>wear rate</em>.</p>
+  <p><strong>The <tt>main</tt> method.</strong> The PropagationStudy class should have a <tt>main</tt> method that takes six or seven command line arguments: a file name, an infection rate, a heal rate, a wear rate,
+      a number of rounds, and one or two more file names.  The method should create a <tt>Network</tt> using the first file name, and create a <tt>PropogationStudy</tt> using the network and the different rates.
+      The sixth command line argument is the name of a file containing a list of <em>initially infected</em> entity names, one name per line.  The optional seventh command line argument will be the name of a file
+      containing a list of <em>initially inoculated</em> entity names.  The <tt>main</tt> method should infect and inoculate those listed entities.
+      The method should then run the propogation for the given number of rounds, and then print a message listing the number of entities healthy, infected, and inoculated at the
+      end of the desired rounds.  The <tt>main</tt> method should not throw any exceptions.</p></li></ol>
+
+<p>By changing the different rates, you can test different types of propogations.  For example, setting an infection rate, heal rate, and wear rate between 0 and 1, we can
+study how diseases move. (Some diseases such as the flu appear to have a 0 wear rate, but for others such as whooping cough, the wear rate is positive.)  
+We can also see what happens if, part way through a disease study, we inoculate a certain percentage of the entities.</p>
+<p>By setting the heal rate to 0, we can test how fast information spreads in a network.  By removing certain relation pairs, we can see how effectively we can slow
+down the information spread through disrupting some of the network links.</p>
+
+<p>Some sample networks will be generated for you and posted on Blackboard so that you can have some fun running different simulations.</p>
+<h3>JUnit Testing (20% of your project grade)</h3>
+
+<p>You are to write JUnit tests for your classes as well as a testing report.  The testing report should describe the <em>kinds</em> of tests that are required
+for this project.  The JUnit testing classes should have comments and testing method names matching the specific tests to the descriptions in your report.</p>
+
+</body>
+
+</html>

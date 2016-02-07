@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>EECS 132: Homework Project 3</title>
+</head>
+
+<body>
+<h2>Programming Project 3</h2>
+<h3>Due Wednesday, November 6 at 11:59pm</h3>
+
+<p>The purpose of this project is to get you to use arrays and loops in building a "real" program.</p>
+
+<p>To submit your project, click on the <em>Project 3</em> link, and you should find a <em>Submit</em> link.  Attach your
+Java file and your testing report.
+Remember to attach the file that end in <tt>.java</tt>, not <tt>.class</tt> or <tt>.java~</tt>.</p>
+
+<h3>General Guidelines (20% of your grade will be based on using good style)</h3>
+
+<p>Guidelines continued from past projects:
+<ul>
+<li>You should place a JavaDoc comment at the top of the file that contains your name (with an appropriate tag)
+and a short description of the purpose of the class.</li>
+<li>You should place a <em>short</em> JavaDoc comment before (directly above) each method describing the method.  The comment should
+be one sentence and describe <em>what</em> the method does, not <em>how</em> it does it.  Be certain to use the
+appropriate JavaDoc tags for parameters, return values, and exceptions (if appropriate). </li>
+<li>You should place a short JavaDoc comment directly above any field indicating the purpose of the variable.</li>
+<li>You should place a comment next to any local variable (loop indeces do not need comments) indicating the purpose
+of the variable. </li>
+<li>You should place a short comment above each loop explaining how the loop works.
+Ideally, you should list the goal of the
+loop, any required precondition for the loop, and if you can, a good invariant for the loop.</li>
+<li>The class should be organized so the fields are at the top, then the constructors, then the non-static methods,
+and finally the static methods.  The <tt>main</tt> method should be last.</li>
+<li>There should be an empty line between the end of one method and the start of the JavaDoc comment for the next method.</li>
+<li>All variables and methods should be named according to the standard Java protocol.</li>
+<li>All code should be indented appropriately.</li>
+</ul></p>
+
+<p>New guidelines for this project.  You must keep your code as simple as possible.  That means:
+<ul>
+<li>You need to avoid unnecessary fields in your class.  Limit fields to data that <em>must</em> be stored between moves of the game
+and can not be accessed through other means.</li>
+<li>Your loops should be simple.  Avoid nested loops unless they are required.  <em>Hint</em>: If you are running through a two dimensional
+area, a nested loop is needed, but if your algorithm is running in a straight line through the board (even if that line is not horizontal)
+only a single, unnested loop is required.</li>
+</ul>
+</p>
+
+<h3>Programming (60% of the project grade)</h3>
+
+<p>For this project you will implement a modified game of <em>Jewel Quest</em>.</p>
+
+<h4>Rules of the game:</h4>
+
+<p>In our modified game, the game is played on a grid of "tiles". 
+Each tile begins with a random jewel placed on the tile (we will represent the jewel type by the color of the tile).
+The base game will be 8 rows and 10 columns with 4 different types of jewels.
+For each legal move, you click a first tile and a second tile immediately next to it, either horizontally or vertically.
+The jewels in the tiles are switched.
+For every group of three or more tiles in a straight line, horizontally or vertically, that contain the same type of jewel
+<em>and that contain the second clicked tile</em>, those tiles are marked with a <tt>*</tt>,
+the jewels in those tiles are removed, 
+the jewels in the tiles above the removed jewels slide down, and new random jewels are placed in the now empty tiles at the top of the grid.  
+Note that the jewels slide, but the tile markings stay in place.  
+The object of the game is to get every square of the grid "marked".  
+If the second clicked tile is not part of any group of three or more tiles in a straight line containing the same jewel type, then this was 
+not a legal move and the jewels in this tile and the initial clicked tile are switched back.
+</p>
+
+<p>For those who have played the "normal" Jewel Quest game, the main difference is that in the normal game, all straight lines of three or
+more tiles with the same jewel are marked and removed, not just groups containing the second clicked tile, and any groupings of three or more
+that appear as a result of sliding jewels are also automatically marked and removed.  In our version, no markings happen automatically, and
+the tile groups to be marked and removed must include the second clicked tile.  Thus at most two lines of tiles will be marked and have jewels removed
+with each move in the game.</p>
+
+<h4>What you must do:</h4>
+<p><strong>Important:</strong> Read the instructions for the testing part of this project. You need to design your 
+code so that it is easy to test.  If you put off writing the testing code to the end of the project, you may need to
+rewrite your code to get testing to work.</p>
+
+<p>You are to create a class called <tt>Jewels</tt>.  The <tt>Jewels</tt> class should have
+two constructors:
+<ol>
+<li> <tt>public Jewels()</tt> <br>
+    Creates a 8x10 grid with 4 different jewels.</li>
+<li> <tt>public Jewels(int rows, int columns, int numJewels)</tt> <br>
+    Creates a <tt>rows</tt>x<tt>columns</tt> grid.</li>
+</ol>
+You may assume that the minimum number of jewel types will be 2 and the maximum number will be 8.</p>
+
+<p>The Jewels class should either extend <tt>JFrame</tt> or contain a <tt>JFrame</tt> that will be the window for the game.</p>
+
+<h4>Create the board</h4>
+<p>You are to create a board by making a two dimensional grid of <tt>JButton</tt>s on a <tt>JPanel</tt>.
+You do this by setting the <em>layout manager</em> of the <tt>JPanel</tt> to be a
+<tt>GridLayout</tt> of the appropriate size.  Here is code that creates a layout for a 4x4 grid:
+<pre>
+JPanel board = new JPanel(new GridLayout(4, 4));
+</pre>
+Then, the <tt>JPanel</tt> can be added as the center component of a <tt>JFrame</tt>,
+<pre>
+  <em>your JFrame</em>.getContentPane().add(board, "Center")
+</pre> 
+and you can
+display the <tt>JFrame.</tt></p>
+<p>
+With a 4x4 grid, you can add up to 16 components to the <tt>JPanel</tt>.
+Each component added to the <tt>JPanel</tt> will go into the grid in the following order:
+<pre>
+ 1  2  3  4
+ 5  6  7  8
+ 9 10 11 12
+13 14 15 16</pre>
+Where the number <em>i</em> indicates the location of the <em>i</em>th added component.
+</p>
+<p>You should create a 2-dimensional array of <tt>JButton</tt>s and add them to the <tt>JPanel</tt>
+in the appropriate order so that the location of a button in the array corresponds to its location
+in the panel.  Try setting a default size for the <tt>JFrame</tt> so that it launches with
+a reasonable board.  Do not use <tt>pack</tt> because it does not work if users want to
+increase the <tt>JFrame</tt> size beyond the default.</p>
+
+<p>Here is a picture of what your board should look like in the middle of a game:<br>
+<img border="0" src="jewels.png" width="500" height="420"></p>
+
+<h4>Implement the buttons</h4>
+<p>You should create an <tt>ActionListener</tt> for the buttons.  Recall that an
+<tt>ActionListener</tt> has a method <tt>actionPerformed</tt> that is called every time
+the button is pressed.  The <tt>actionPerformed</tt> method has a single parameter,
+<tt>ActionEvent e</tt>, and you can get the button that was pressed by using the code
+<pre>JButton b = (JButton)e.getSource();</pre>
+<tt>b</tt> is the button that was pressed, and you can locate this button in your
+array of buttons to determine <tt>b</tt>'s row and column.</p>
+
+<p>When a button is pressed, the code should save the button (or its location) and wait for a second 
+button press.  On the second press, your code should get the second button, check to see if the two
+clicked buttons are adjacent, and swap the colors of those buttons.  It is not hard to determine 
+if two buttons are adjacent because you get the button that was clicked from the <tt>ActionEvent</tt> 
+parameter, and you have all the possible buttons stored in their appropriate location in a two-dimensional
+array.  If the user did not click adjacent buttons, you start again waiting for the first button click.</p>
+
+<p>You now need to see if there are at least three jewels in a straight
+line, horizontally or vertically, containing the second clicked tile.
+If there are, these tiles need to be marked and the jewels removed.  <em> Do not place all the code for this
+into the <tt>actionPerformed</tt> method.  You need to have JUnit tests so you should create separate methods 
+to handle these actions.</em></p>
+
+<h4>What to do on a win</h4>
+
+<p>Once all the tiles have been marked, you are to print a message indicating that the game is over
+and list the total number of legal moves it took to complete the game.</p>
+
+<p><strong>Important:</strong> Mac machines do not, by default, permit you to change the color of a button.  Probably because Apple
+thinks it knows better than you what a user interface should look like.  To be able to set a button's background color, you need to
+add this code to your program (either in the constructor or the main method):
+<pre>
+    try {
+      UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+    }
+    catch (Exception e) {
+    }
+</pre>
+</p>
+
+<h4>Add a <tt>main</tt> method</h4>
+<p>The <tt>Jewels</tt> class should have a <tt>main</tt> method that launches the Jewels
+game.  With a <tt>main</tt> method, you should be able to play your game by typing:
+<pre>java Jewels</pre>
+in the Interactions pane.  You should also allow the user to enter three arguments, the
+board size and the number of jewel types.  For example: <br>
+<tt>java Jewels</tt> should start a game with a 10x10 grid and 4 different jewel types (colors), and<br>
+<tt>java Jewels 8 12 5</tt> should start a game with 8 rows, 12 columns, and 5 different jewels.
+If the user enters something other than realistic numbers, your code should
+do something appropriate, but not crash.</p>
+
+<p><strong>Hint:</strong> Do not try to code everything at once!  First just get the game board displaying.
+Then add the ability to click on a button and have text appear on the button clicked.  Then make it so that the correct
+button gets the text.  Then write code to search for a win.
+Finally, get the
+<tt>main</tt> method working.</p>
+
+<h3>JUnit Testing</h3>
+
+<p>You are to write JUnit tests for this program.  You obviously will not be able to test the <tt>main</tt> method, the constructors, or the action listener with JUnit
+because these expect user input or display a window to the screen.  Instead, break the logic of your program into small, easy to test methods, and write
+JUnit tests for those methods.
+Remember the tips for testing: <em>test 0, test 1, test many</em> and 
+<em>test first, test middle, test last</em>.  For example,
+first, middle, last can refer to the locations on the game board (ex: on the edge or in the middle).
+Your testing report should describe what you consider to be "units" of the game and what 
+"test 0, test 1, test many" and "test first, test middle, test last" means for each unit you test.</p>
+
+<h3>Extra Credit:</h3>
+
+<p>If you decide to do an extra credit, <em>you must state in the Blackboard comments what you did</em>.  Don't make us hunt
+through your code to figure out what extra you did.</p>
+
+<h4>Extra Credit #1</h4>
+
+<p>Create fancier Jewels game.  Instead of using the button color to indicate the jewel type and a <tt>'*'</tt> to indicate if the 
+tile is marked, set all buttons to initially have the same background color.  Use different shaped and colored <em>icons</em> for the jewels,
+change the background to yellow to indicate a tile being marked, and use a different color to indicate when a button is pressed.</p>
+
+<h4>Extra Credit #2</h4>
+
+<p>Make further improvements to the aesthetics of the game.  Here are three possible ideas: add fancy borders and extra areas to the game board
+that display useful information, animate the jewel movements, add a timer and instead of counting the number of moves the game goes until the
+timer runs out, or add obstacles to the board: tiles that do not contain jewels, do not slide, and will not be marked.  For many of these 
+ideas, you will need to hunt through the Java API.</p>
+
+
+</body>
+
+</html>

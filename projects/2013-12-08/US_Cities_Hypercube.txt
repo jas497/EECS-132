@@ -1,0 +1,448 @@
+New York, Los Angeles
+New York, Chicago
+New York, Philadelphia
+New York, San Antonio
+New York, Memphis
+New York, Cleveland
+New York, Saint Petersburg
+Los Angeles, Houston
+Los Angeles, Phoenix
+Los Angeles, Detroit
+Los Angeles, Baltimore
+Los Angeles, Long Beach
+Los Angeles, Bakersfield
+Chicago, Houston
+Chicago, San Diego
+Chicago, San Jose
+Chicago, Milwaukee
+Chicago, Albuquerque
+Chicago, Stockton
+Houston, Dallas
+Houston, Indianapolis
+Houston, Boston
+Houston, Kansas City
+Houston, Birmingham
+Philadelphia, Phoenix
+Philadelphia, San Diego
+Philadelphia, San Francisco
+Philadelphia, El Paso
+Philadelphia, Fresno
+Philadelphia, Jersey City
+Phoenix, Dallas
+Phoenix, Jacksonville
+Phoenix, Nashville
+Phoenix, Virginia Beach
+Phoenix, Norfolk
+San Diego, Dallas
+San Diego, Columbus
+San Diego, Denver
+San Diego, Atlanta
+San Diego, Hialeah
+Dallas, Austin
+Dallas, Seattle
+Dallas, Sacramento
+Dallas, Greensboro
+San Antonio, Detroit
+San Antonio, San Jose
+San Antonio, San Francisco
+San Antonio, Washington
+San Antonio, Oakland
+San Antonio, Glendale
+Detroit, Indianapolis
+Detroit, Jacksonville
+Detroit, Charlotte
+Detroit, Tulsa
+Detroit, Plano
+San Jose, Indianapolis
+San Jose, Columbus
+San Jose, Fort Worth
+San Jose, Omaha
+San Jose, Baton Rouge
+Indianapolis, Austin
+Indianapolis, Portland
+Indianapolis, Minneapolis
+Indianapolis, Lincoln
+San Francisco, Jacksonville
+San Francisco, Columbus
+San Francisco, Las Vegas
+San Francisco, Colorado Springs
+San Francisco, Garland
+Jacksonville, Austin
+Jacksonville, Tucson
+Jacksonville, Miami
+Jacksonville, Rochester
+Columbus, Austin
+Columbus, Oklahoma City
+Columbus, Honolulu
+Columbus, Akron
+Austin, New Orleans
+Austin, Saint Louis
+Austin, Scottsdale
+Memphis, Baltimore
+Memphis, Milwaukee
+Memphis, El Paso
+Memphis, Washington
+Memphis, Wichita
+Memphis, Madison
+Baltimore, Boston
+Baltimore, Nashville
+Baltimore, Charlotte
+Baltimore, Arlington
+Baltimore, Fremont
+Milwaukee, Boston
+Milwaukee, Denver
+Milwaukee, Fort Worth
+Milwaukee, Anaheim
+Milwaukee, Fort Wayne
+Boston, Seattle
+Boston, Portland
+Boston, Pittsburgh
+Boston, Montgomery
+El Paso, Nashville
+El Paso, Denver
+El Paso, Las Vegas
+El Paso, Cincinnati
+El Paso, Richmond
+Nashville, Seattle
+Nashville, Tucson
+Nashville, Toledo
+Nashville, Mobile
+Denver, Seattle
+Denver, Oklahoma City
+Denver, Tampa
+Denver, Spokane
+Seattle, New Orleans
+Seattle, Buffalo
+Seattle, Des Moines
+Washington, Charlotte
+Washington, Fort Worth
+Washington, Las Vegas
+Washington, Saint Paul
+Washington, Grand Rapids
+Charlotte, Portland
+Charlotte, Tucson
+Charlotte, Aurora
+Charlotte, Tacoma
+Fort Worth, Portland
+Fort Worth, Oklahoma City
+Fort Worth, Corpus Christi
+Fort Worth, Reno
+Portland, New Orleans
+Portland, Raleigh
+Portland, Arlington
+Las Vegas, Tucson
+Las Vegas, Oklahoma City
+Las Vegas, Newark
+Las Vegas, Columbus
+Tucson, New Orleans
+Tucson, Anchorage
+Tucson, Modesto
+Oklahoma City, New Orleans
+Oklahoma City, Riverside
+Oklahoma City, Durham
+New Orleans, Louisville
+New Orleans, Boise City
+Cleveland, Long Beach
+Cleveland, Albuquerque
+Cleveland, Fresno
+Cleveland, Oakland
+Cleveland, Wichita
+Cleveland, Orlando
+Long Beach, Kansas City
+Long Beach, Virginia Beach
+Long Beach, Tulsa
+Long Beach, Arlington
+Long Beach, Winston-Salem
+Albuquerque, Kansas City
+Albuquerque, Atlanta
+Albuquerque, Omaha
+Albuquerque, Anaheim
+Albuquerque, San Bernardino
+Kansas City, Sacramento
+Kansas City, Minneapolis
+Kansas City, Pittsburgh
+Kansas City, Salt Lake City
+Fresno, Virginia Beach
+Fresno, Atlanta
+Fresno, Colorado Springs
+Fresno, Cincinnati
+Fresno, Jackson
+Virginia Beach, Sacramento
+Virginia Beach, Miami
+Virginia Beach, Toledo
+Virginia Beach, Little Rock
+Atlanta, Sacramento
+Atlanta, Honolulu
+Atlanta, Tampa
+Atlanta, Newport News
+Sacramento, Saint Louis
+Sacramento, Buffalo
+Sacramento, Laredo
+Oakland, Tulsa
+Oakland, Omaha
+Oakland, Colorado Springs
+Oakland, Saint Paul
+Oakland, Amarillo
+Tulsa, Minneapolis
+Tulsa, Miami
+Tulsa, Aurora
+Tulsa, Knoxville
+Omaha, Minneapolis
+Omaha, Honolulu
+Omaha, Corpus Christi
+Omaha, Providence
+Minneapolis, Saint Louis
+Minneapolis, Raleigh
+Minneapolis, Worcester
+Colorado Springs, Miami
+Colorado Springs, Honolulu
+Colorado Springs, Newark
+Colorado Springs, Tempe
+Miami, Saint Louis
+Miami, Anchorage
+Miami, Dayton
+Honolulu, Saint Louis
+Honolulu, Riverside
+Honolulu, Oceanside
+Saint Louis, Louisville
+Saint Louis, Ontario
+Wichita, Arlington
+Wichita, Anaheim
+Wichita, Cincinnati
+Wichita, Saint Paul
+Wichita, Huntsville
+Arlington, Pittsburgh
+Arlington, Toledo
+Arlington, Aurora
+Arlington, Chattanooga
+Anaheim, Pittsburgh
+Anaheim, Tampa
+Anaheim, Corpus Christi
+Anaheim, Fort Lauderdale
+Pittsburgh, Buffalo
+Pittsburgh, Raleigh
+Pittsburgh, Tallahassee
+Cincinnati, Toledo
+Cincinnati, Tampa
+Cincinnati, Newark
+Cincinnati, Springfield
+Toledo, Buffalo
+Toledo, Anchorage
+Toledo, Pomona
+Tampa, Buffalo
+Tampa, Riverside
+Tampa, Springfield
+Buffalo, Louisville
+Buffalo, Rockford
+Saint Paul, Aurora
+Saint Paul, Corpus Christi
+Saint Paul, Newark
+Saint Paul, Santa Rosa
+Aurora, Raleigh
+Aurora, Anchorage
+Aurora, Lakewood
+Corpus Christi, Raleigh
+Corpus Christi, Riverside
+Corpus Christi, Syracuse
+Raleigh, Louisville
+Raleigh, Kansas City
+Newark, Anchorage
+Newark, Riverside
+Newark, Irvine
+Anchorage, Louisville
+Anchorage, Vancouver
+Riverside, Louisville
+Riverside, Pasadena
+Louisville, Brownsville
+Saint Petersburg, Bakersfield
+Saint Petersburg, Stockton
+Saint Petersburg, Jersey City
+Saint Petersburg, Glendale
+Saint Petersburg, Madison
+Saint Petersburg, Orlando
+Bakersfield, Birmingham
+Bakersfield, Norfolk
+Bakersfield, Plano
+Bakersfield, Fremont
+Bakersfield, Winston-Salem
+Stockton, Birmingham
+Stockton, Hialeah
+Stockton, Baton Rouge
+Stockton, Fort Wayne
+Stockton, San Bernardino
+Birmingham, Greensboro
+Birmingham, Lincoln
+Birmingham, Montgomery
+Birmingham, Salt Lake City
+Jersey City, Norfolk
+Jersey City, Hialeah
+Jersey City, Garland
+Jersey City, Richmond
+Jersey City, Jackson
+Norfolk, Greensboro
+Norfolk, Rochester
+Norfolk, Mobile
+Norfolk, Little Rock
+Hialeah, Greensboro
+Hialeah, Akron
+Hialeah, Spokane
+Hialeah, Newport News
+Greensboro, Scottsdale
+Greensboro, Des Moines
+Greensboro, Laredo
+Glendale, Plano
+Glendale, Baton Rouge
+Glendale, Garland
+Glendale, Grand Rapids
+Glendale, Amarillo
+Plano, Lincoln
+Plano, Rochester
+Plano, Tacoma
+Plano, Knoxville
+Baton Rouge, Lincoln
+Baton Rouge, Akron
+Baton Rouge, Reno
+Baton Rouge, Providence
+Lincoln, Scottsdale
+Lincoln, Arlington
+Lincoln, Worcester
+Garland, Rochester
+Garland, Akron
+Garland, Columbus
+Garland, Tempe
+Rochester, Scottsdale
+Rochester, Modesto
+Rochester, Dayton
+Akron, Scottsdale
+Akron, Durham
+Akron, Oceanside
+Scottsdale, Boise City
+Scottsdale, Ontario
+Madison, Fremont
+Madison, Fort Wayne
+Madison, Richmond
+Madison, Grand Rapids
+Madison, Huntsville
+Fremont, Montgomery
+Fremont, Mobile
+Fremont, Tacoma
+Fremont, Chattanooga
+Fort Wayne, Montgomery
+Fort Wayne, Spokane
+Fort Wayne, Reno
+Fort Wayne, Fort Lauderdale
+Montgomery, Des Moines
+Montgomery, Arlington
+Montgomery, Tallahassee
+Richmond, Mobile
+Richmond, Spokane
+Richmond, Columbus
+Richmond, Springfield
+Mobile, Des Moines
+Mobile, Modesto
+Mobile, Pomona
+Spokane, Des Moines
+Spokane, Durham
+Spokane, Springfield
+Des Moines, Boise City
+Des Moines, Rockford
+Grand Rapids, Tacoma
+Grand Rapids, Reno
+Grand Rapids, Columbus
+Grand Rapids, Santa Rosa
+Tacoma, Arlington
+Tacoma, Modesto
+Tacoma, Lakewood
+Reno, Arlington
+Reno, Durham
+Reno, Syracuse
+Arlington, Boise City
+Arlington, Kansas City
+Columbus, Modesto
+Columbus, Durham
+Columbus, Irvine
+Modesto, Boise City
+Modesto, Vancouver
+Durham, Boise City
+Durham, Pasadena
+Boise City, Brownsville
+Orlando, Winston-Salem
+Orlando, San Bernardino
+Orlando, Jackson
+Orlando, Amarillo
+Orlando, Huntsville
+Winston-Salem, Salt Lake City
+Winston-Salem, Little Rock
+Winston-Salem, Knoxville
+Winston-Salem, Chattanooga
+San Bernardino, Salt Lake City
+San Bernardino, Newport News
+San Bernardino, Providence
+San Bernardino, Fort Lauderdale
+Salt Lake City, Laredo
+Salt Lake City, Worcester
+Salt Lake City, Tallahassee
+Jackson, Little Rock
+Jackson, Newport News
+Jackson, Tempe
+Jackson, Springfield
+Little Rock, Laredo
+Little Rock, Dayton
+Little Rock, Pomona
+Newport News, Laredo
+Newport News, Oceanside
+Newport News, Springfield
+Laredo, Ontario
+Laredo, Rockford
+Amarillo, Knoxville
+Amarillo, Providence
+Amarillo, Tempe
+Amarillo, Santa Rosa
+Knoxville, Worcester
+Knoxville, Dayton
+Knoxville, Lakewood
+Providence, Worcester
+Providence, Oceanside
+Providence, Syracuse
+Worcester, Ontario
+Worcester, Kansas City
+Tempe, Dayton
+Tempe, Oceanside
+Tempe, Irvine
+Dayton, Ontario
+Dayton, Vancouver
+Oceanside, Ontario
+Oceanside, Pasadena
+Ontario, Brownsville
+Huntsville, Chattanooga
+Huntsville, Fort Lauderdale
+Huntsville, Springfield
+Huntsville, Santa Rosa
+Chattanooga, Tallahassee
+Chattanooga, Pomona
+Chattanooga, Lakewood
+Fort Lauderdale, Tallahassee
+Fort Lauderdale, Springfield
+Fort Lauderdale, Syracuse
+Tallahassee, Rockford
+Tallahassee, Kansas City
+Springfield, Pomona
+Springfield, Springfield
+Springfield, Irvine
+Pomona, Rockford
+Pomona, Vancouver
+Springfield, Rockford
+Springfield, Pasadena
+Rockford, Brownsville
+Santa Rosa, Lakewood
+Santa Rosa, Syracuse
+Santa Rosa, Irvine
+Lakewood, Kansas City
+Lakewood, Vancouver
+Syracuse, Kansas City
+Syracuse, Pasadena
+Kansas City, Brownsville
+Irvine, Vancouver
+Irvine, Pasadena
+Vancouver, Brownsville
+Pasadena, Brownsville

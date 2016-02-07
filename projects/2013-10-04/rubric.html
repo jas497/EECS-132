@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>EECS 132: Homework Assignment 1 Grading Rubric</title>
+</head>
+
+<body>
+<h2>Programming Project 1 Grading Rubric</h2>
+
+<p>For the grading, the getter/setter methods are all methods that only set a value or return a value.
+These are the methods that start with <tt>get</tt> or <tt>set</tt>, but also include <tt>deposit</tt>, <tt>transfer</tt> of the Cash class.</p>
+
+<h3>1. Testing: 20 points</h3>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>20</td>  <td> A description of how to thoroughly test all the methods of the assignment.  
+                        Completed tests for each method written in the student's submission.  
+	                Each test gives the true output of the student's submission.
+                        A note on any test that gives an incorrect result.</td></tr>
+  <tr><td>18</td>  <td> A description of how to thoroughly test all the methods of the assignment and completed tests
+                        for all the non-getter/setter methods written in the student's submission, all the constructors are tested, and at least three quarters of the 
+		        getter/setter methods are tested.  Each test gives the true output of the student's submission.
+			At most two cases where the testing report fails to make note of a case where the test demonstrates an error in the student's code.</td></tr>
+  <tr><td>15</td>  <td> A description on how to thoroughly at least half of the 36 getter/setter methods and at least seven of the 13 non-getter/setter methods.
+			All tests accurately represent the student's code.</td></tr>
+  <tr><td>12</td>  <td> Includes reasonable tests of at least 10 methods including at least five of the 13 non-getter/setter methods.
+			The results of tests accurately represent the student's submission.
+  <tr><td>10</td>  <td> Includes a reasonable test of all the methods one class.
+			The results of tests accurately represent the student's submission.
+                        </td><tr>
+  <tr><td>0</td>   <td> Does not include a reasonable test for all methods of any one of the classes
+			OR up to two tests do not accurately represent how the student's code works.
+</td></tr>
+  <tr><td>-10</td> <td> Includes output for methods that were not in the student's submission OR gives
+                        at least three results misrepresenting how the student's code works.</td></tr>
+</tbody></table>
+              
+<h3>2. Readability: 20 points</h3>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>20</td> <td>Correct comments at top of class file, above each method and and above each field.  Each comment at most
+                      one or two sentences and is a good description.  Class has fields
+                     first, then constructors, then the remaining methods.  All code follows the proper indentation and
+                     naming style.  (See page 689 of the recommended textbook for a style suggestion.)  There is a blank line between each method.</td></tr>
+  <tr><td>18</td> <td>Mostly indented well (up to two places not indented correctly) AND most names correctly follow the
+                      naming convention (up to two poorly named variables or methods) AND coments on most methods,
+                      constructors, fields, and the top of the file (up to four missing comments).  Each comment
+                      is a good description.</td></tr>
+  <tr><td>15</td> <td>More than two places of poor indenting OR more than two method or variable names that do not follow
+                      the Java convention OR more than four missing comments OR comments are longer than one or two 
+                      sentences OR comments are direct copies of the homework description.</td></tr>
+  <tr><td>12</td> <td>Comments missing from at least half of the places that require them OR all of the if statements
+                      are poorly indented OR at least half of the methods are poorly indented</td></tr>
+  <tr><td>5</td>  <td>Missing comments in the code OR poor indentation throughout the code</td></tr>
+  <tr><td>0</td>  <td>No comments in the code AND poor indentation in the code.</td></tr>
+</tbody></table>
+
+
+<h3>3. Correctness: 60 points</h3>
+  <h4>3.a. Fields:  10 points</h4>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>10</td><td>All fields provided. All fields private.  All fields are given explicit initial values either at the declaration or in the constructor.
+  No extraneous fields.  No static fields or methods. </td></tr>
+  <tr><td>9</td><td>Most of the fields are done correctly.  Less than half of the fields have problems and the is only one type of problem with the fields: 
+some not provided, some not private, some not given explicit initial values, some are static OR some extraneous fields provided.</td></tr>
+  <tr><td>7</td><td>Most of the fields are done correctly.  Less than half of the fields have problems and there are up to three different types of problems with the fields:
+some not provided, some not private, some not given explicit initial values, some are static or some extraneous fields provided.</td></tr>
+  <tr><td>5</td><td>At least one class has at least half of the necessary fields provided, and at least one field is private, non-static, and has an explicit initial value.</td></tr>
+  <tr><td>0</td><td>No class has at least half of the necessary fields provided OR every field has at least two of the following problems: is static, not private, and does not set an initial value.</td></tr>
+</tbody></table>
+
+
+  <h4>3.b. Getter and setter methods: 20 points </h4>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>20</td>  <td>All public getter/setter methods provided and correct (public, getter correctly gets the value, setter correctly sets the field, no extra processing done), no extra public getter or setter methods not listed in the assignment.  (Extra private methods are ok.)</td></tr>
+  <tr><td>18</td>  <td>All getter/setter methods correct, but extra public getter or setter methods provided that are not listed in the assignment OR missing the getter-setter methods (if the methods are required in the assignment) for up to 3 fields. </td></tr>
+<tr><td>15</td>  <td>Missing the getter/setter methods for more than 3 fields, but all provided getter/setter methods are correct OR all getter setter methods provided but up to 6 cases where the setter method fails to set the field or the getter method fails to 
+return the proper value or the method is not public or the method does extra processing. </td></tr>
+  <tr><td>10</td>  <td>At least 3 cases where the provided getter/setter methods correctly return the proper value and set the proper field.</td></tr>
+  <tr><td>5</td>  <td>Provides at least one correct getter/setter pair for some field.</td></tr>
+  <tr><td>0</td>  <td>No correct getter or setter methods provided. </td></tr>
+</tbody></table>
+
+  <h4>3.c. Constructors:  10 points</h4>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>10</td>  <td>All constructors correct.</td></tr>
+  <tr><td> 9</td> <td>The constructors fail to set the value for one field OR the constructors work correctly but have extra unnecessary operations or duplicate computation.</td></tr>
+  <tr><td> 7</td>  <td>At least one class has a correct constructor. </td></tr>
+  <tr><td> 5</td>  <td>All constructors fail to properly set field values OR the methods are not really constructors because they are incorrectly given return values.</td></tr>
+  <tr><td> 0</td>  <td>No constructors provided.</td></tr>
+</tbody></table>
+
+
+  <h4>3.d. Non-getter/setter Methods:  20 points</h4>
+  <table border="2">
+  <thead><tr><th>Points</th><th>Metric</th></tr></thead>
+  <tbody>
+  <tr><td>20</td>  <td>All methods are correct.</td></tr>
+  <tr><td>18</td>  <td>All methods that require conditional statements have well-formed statements for the problem.  There could possibly be minor errors in the mathematical processing.  All the methods
+ that do not require conditional statements are correct or have only minor errors.</td></tr>
+  <tr><td>15</td>  <td>At least six of the methods that require conditional statements have well-formed statements for the problem with possibly minor errors in the mathematical processing.</td></tr>
+  <tr><td>10</td>  <td>At least three of the methods that require conditional statements have well-formed statements for the problem, possibly with minor errors.</td></tr>
+  <tr><td>5</td>  <td>At least one method has an appropriatly formed conditional statement for the problem with possible minor errors OR all the methods that do not require conditional statements
+have only minor errors.<td>
+  <tr><td>0</td>  <td>No method has an appropriate conditional statement for the problem AND at least one of the methods that does not require a conditional statement has major errors.</td></tr>
+</tbody></table>
+
+</body>
+</html>

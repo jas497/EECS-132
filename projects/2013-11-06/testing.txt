@@ -1,0 +1,143 @@
+Testing report for project due 2013-11-06
+James Starkman, jas497
+
+Tests were done with JUnit.  Details on "what test 0, test 1, test many and 
+test first, last, and middle means for each method and why your JUnit tests 
+cover those cases" are below.
+Notes on styling:
+	number of asterisks notes major divisions.  
+	3 for begin/end, 2 for headings, 1 for each part
+	"test 0" is refered to as "none", "test 1" as "one", and "test *" as "*"
+	all ranges denoted as REs or as inequalities
+
+The data and the images were kept separate in this program.  The data live in
+data[][], while the JButton pointers live in buttons[][].
+Regarding the interface, black background is unmarked and white is marked.  
+This is considered an aesthetic improvement over adding text.
+
+also, several abbreviaitons:
+#define gem   jewel
+#define rock  jewel
+#define cell  "tile on the board or equivalent in data[][]"
+#define LL    lastLocation //last cell clicked, stored as a field
+#define CB    covered_by
+
+***BEGIN REPORT ON Jewels.java CLASS***
+"You obviously will not be able to test the main method, the constructors, or
+the action listener with JUnit." - the assignment HTML file.
+
+**Other methods/functions**
+Anything more complicated than get/set.
+
+*makeRock()*
+Selects a valid value for the new rock and returns such.
+none, one, first, last
+	These do not really apply to an RNG-governed method.
+many, middle
+	This method pulls a number out of an RNG and constrains it to valid data
+	values.  Testing was statistical in nature; no bad return values were
+	found among a thousand returns.
+
+
+*processClick(int x, int y)*
+Givens/preconditions: x,y are valid coordinates from actionPerformed().
+Called when location of second click has been determined.  If a given click is
+the first of the pair, this is not called.
+none, many
+	Precluded.
+one
+	Means one other cell clicked.  CB running this normally (other tests).
+first
+	Means first cell on board, (0,0), is passed in.  CB passing that in.
+middle
+	Means any random cell is passed in.  CB previous tests.
+last
+	Means last cell, (widthCells-1, heightCells-1).  This is (9,7) by default.
+	CB passing that in.
+
+
+*exchange(int x, int y)*
+Given/Precondition: Cell just clicked is neighbor of one in LL.
+Effects the exchange of the cells, passes execution to kill(), and does
+various turn-is-now-finished tasks (update the images, etc.) if that worked.
+none, many, middle
+	Precluded by the givens.
+one
+	Means one input.  CB calling on two cells and checking if they have been
+	swapped or not.  Note that data indecies coorespond to resistor colors.
+first, last
+	Means that this is the only run; this method is only called in one place.
+	CB forcing the game to a simple, all-black-except-for-the-important-few
+	state, calling the method, and asserting that the changes were effected as
+	they should have been (in this case, relevant cells be all black).
+
+
+*kill(int x, int y)*
+Givens: Everything from exchange(), and that the cells have been swapped.
+Calls search() on all 6 (or 12, depending on a flag) possible rays to trace, 
+followed by doing its job of shifting down the rocks, "clearing" the removed
+ones.
+none, one, middle
+	Precluded by the givens.
+first, last, many
+	Means that this is the only run; this method is only called in one place.
+	CB forcing the game to a simple, all-black-except-for-the-important-few
+	state (here, a rainbow down the board), calling the method, and asserting
+	that the changes were effected as they should have been (in this case, be
+	shifted down by one).
+
+
+*search(int x, int y, byte master, int delX, int delY)*
+Givens: Everything from kill(), and that delX and delY are not both zero;
+also, that all inputs are valid.
+Traces a ray out from input point in input direction (adds the delX (delta x)
+to x, same with y), comparing the color of the cell with the master color.  
+Kind of like the "magic wand" feature in Photoshop (R) (and similar), but
+directed and intolerant of differences.
+none, one, many
+	Precluded.
+first
+	Means the first cell encountered.  CB testing when input cell was next to 
+	the wall (edge of the board), and next to a different color.
+middle
+	Means the n-th cell encountered.  CB testing at some distance away from
+	the wall.
+last
+	Means last cell encountered.  CB other tests.
+
+
+*checkWin()*
+Givens: All from exchange(), but nothing (beyond a constructed object) needed.
+Checks every tile for the "this cell has been marked" bit (0x10) to be set,
+and sets field flag youHaveWon if all cells are so marked.
+none
+	Means no win-bits set.  CB forcing the board to such a state and calling.
+"one"
+	Only one win-bit being set should not happen (without _serious_ bugs).  
+	Thus, part of the board with bits set, part without is tested.
+"many" (all)
+	Means all bits on.  CB forcing that to be so, and then checkWin()-ing.
+first, middle, last
+	Means if [fml] cell is covered by the loop; if there are no off-by-one
+	errors.  CB other test.
+
+*updatePictures()*
+Givens: All from exchange(), including that a change happened.
+none
+	Precluded; if there is nothing to update, this should not be called.
+one
+	Means that the update will catch one change (e.g., background).  CB other
+	test.
+many
+	Means update will catch all changes (background, icon).  CB other test.
+first
+	Means change can be at beginning.  CB making that need updating, and
+	calling.
+middle
+	Means a cell that is neither (0,0) nor (9,7) was updated.  CB forcing a 
+	change, and doing that.
+last
+	Means (9,7) needs update.  CB forcing that to need it, and calling.
+
+	
+***END REPORT ON HW2.java CLASS***
